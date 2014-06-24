@@ -1,0 +1,22 @@
+package:
+  name: openalea.deploy
+  version: 1.1
+
+source:
+  svn_url: https://scm.gforge.inria.fr/svn/openalea/trunk/deploy
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+
+test:
+  imports:
+    - openalea.deploy
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: Cecill-c License
