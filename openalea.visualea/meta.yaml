@@ -1,0 +1,23 @@
+package:
+  name: openalea.visualea
+  version: 1.3.0
+
+source:
+  git_url: https://github.com/openalea/openalea
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.core
+    - openalea.grapheditor
+  run:
+    - python
+    - setuptools
+    - openalea.core
+    - openalea.grapheditor
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: Cecill-C License
