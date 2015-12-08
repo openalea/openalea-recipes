@@ -1,0 +1,22 @@
+package:
+  name: scons
+  version: 2.4.1
+
+source:
+  fn: scons-2.4.1.tar.gz
+  url: http://prdownloads.sourceforge.net/scons/scons-2.4.1.tar.gz
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - SCons
+
+about:
+  home: http://www.scons.org
+  license: MIT License
