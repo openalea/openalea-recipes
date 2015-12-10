@@ -1,6 +1,6 @@
-dir misc
+cd misc
 "%PYTHON%" setup.py install --prefix="%PREFIX%"
-dir ..
+cd ..
 if errorlevel 1 exit 1
 
 :: Add more build steps here, if they are necessary.
