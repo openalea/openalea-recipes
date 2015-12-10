@@ -11,9 +11,11 @@ requirements:
   build:
     - python
     - setuptools
+    - pywin32 # [win]
   run:
     - python
     - setuptools
+    - pywin32 # [win]
 
 test:
   imports:

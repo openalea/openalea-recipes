@@ -17,12 +17,14 @@ requirements:
     - openalea.deploy
     - openalea.core
     - openalea.grapheditor
+    - mingw # [win]
   run:
     - python
     - setuptools
     - openalea.core
     - openalea.grapheditor
-
+    - pyqt
+    - ipython < 3.0
 about:
   home: http://openalea.gforge.inria.fr/
   license: Cecill-C License
