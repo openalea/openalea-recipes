@@ -5,7 +5,9 @@ package:
 source:
   git_url: https://github.com/openalea/openalea
 #  git_url: ../../../git/openalea
-  git_tag: conda
+
+build:
+  preserve_egg_dir: True
 
 requirements:
   build:
