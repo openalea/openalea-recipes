@@ -23,7 +23,7 @@ requirements:
     - openalea.core
     - openalea.grapheditor
     - pyqt
-    - ipython =2.4.1
+    - ipython ==2.4.1
 about:
   home: http://openalea.gforge.inria.fr/
   license: Cecill-C License
