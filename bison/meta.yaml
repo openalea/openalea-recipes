@@ -1,0 +1,22 @@
+package:
+  name: bison
+  version: 3.0.4
+
+source:
+  fn: bison-3.0.4.tar.gz
+  url: http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz
+  md5: a586e11cd4aff49c3ff6d3b6a4c9ccf8
+
+about:
+    home: https://www.gnu.org/software/bison/
+    license: GPL3
+
+requirements:
+  build:
+    - m4 # [linux]
+  
+  run:
+    - m4 # [linux]
+
+extra:
+  note: bison is not relocatable, that means that bison --print-datadir return wrong dir but you can define an env var BISON_PKGDATADIR to change it. Search "bison relocatable"
