@@ -1,0 +1,18 @@
+package:
+  name: flex
+  version: 2.5.39
+
+source:
+  fn: flex-2.5.39.tar.bz2
+  url: http://sourceforge.net/projects/flex/files/flex-2.5.39.tar.bz2
+  md5: 77d44c6bb8c0705e0017ab9a84a1502b
+
+about:
+    home: http://flex.sourceforge.net/
+    license: http://flex.sourceforge.net/manual/Copyright.html
+
+requirements:
+  build:
+    - m4
+  run:
+    - m4
