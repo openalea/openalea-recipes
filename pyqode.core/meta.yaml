@@ -1,0 +1,82 @@
+package:
+  name: pyqode.core
+  version: "2.6.7"
+
+source:
+  fn: pyqode.core-2.6.7.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyqode.core/pyqode.core-2.6.7.tar.gz
+  md5: 10094cbfebf6a7dd7787922bd113b994
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  noarch_python: True
+  preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pyqode.core = pyqode.core:main
+    #
+    # Would create an entry point called pyqode.core that calls pyqode.core.main()
+
+    - pyqode-console = pyqode.core.tools.console:main
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pygments
+    - pyqode.qt
+    - future
+
+  run:
+    - python
+    - setuptools
+    - pygments
+    - pyqode.qt
+    - future
+
+test:
+  # Python imports
+  imports:
+    - pyqode
+    - pyqode.core
+    - pyqode.core._designer_plugins
+    - pyqode.core._forms
+    - pyqode.core.api
+    - pyqode.core.backend
+    - pyqode.core.dialogs
+    - pyqode.core.managers
+    - pyqode.core.modes
+    - pyqode.core.panels
+    - pyqode.core.styles
+    - pyqode.core.tools
+    - pyqode.core.widgets
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - pyqode-console --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/pyQode/pyqode.core
+  license: MIT License
+  summary: 'PyQt/PySide Source Code Editor Widget'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
