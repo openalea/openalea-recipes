@@ -1,5 +1,5 @@
 package:
-  name: vplants.tool
+  name: vplants.sequence_analysis
   version: 1.2.0
 
 source:
@@ -10,8 +10,8 @@ about:
   license: GPL/LGPL
   summary: Tool for stat and sequence analysis
 
-# needs boost - this is now in defaults.  the ioos boost is broken (and has been
-# deprecated but still appears in the channel - 2015-08-02)
+build:
+  preserve_egg_dir: True
 
 requirements:
   # it doesn't really require python, but maybe that will fix
@@ -24,7 +24,12 @@ requirements:
    - openalea.sconsx
    - readline
    - qt
+   - vplants.tool
+   - vplants.stat_tool
+   - boost
   run:
    - python
    - readline
    - qt
+   - vplants.tool
+   - vplants_stat_tool

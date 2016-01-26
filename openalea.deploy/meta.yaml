@@ -3,9 +3,14 @@ package:
   version: 1.2.1
 
 source:
-  git_url: https://github.com/openalea/deploy
-#  git_tag: conda
+  git_url: https://github.com/pradal/deploy
+  git_tag: conda
 #  git_url: ../../../git/deploy
+  # git_url: /Users/pradal/devlp/git/deploy
+  # git_tag: conda
+
+build:
+  number: 3
 
 requirements:
   build:
