@@ -32,4 +32,4 @@ requirements:
    - readline
    - qt
    - vplants.tool
-   - vplants_stat_tool
+   - vplants.stat_tool
