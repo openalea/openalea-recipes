@@ -7,7 +7,7 @@ source:
   url: http://bitbucket.org/eigen/eigen/get/3.2.5.tar.bz2
 
 build:
-  number: 1       [win]
+  number: 1
 
 requirements:
   build:
