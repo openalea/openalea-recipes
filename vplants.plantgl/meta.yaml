@@ -29,6 +29,8 @@ requirements:
    - flex
    - cgal
    - gmp
+   - eigen3
+   - qhull
   run:
    - python
    - readline
