@@ -19,6 +19,13 @@ openalea_lib=$PREFIX/lib openalea_includes=$PREFIX/include \
 vplants_tool_lib=$PREFIX/lib vplants_tool_include=$PREFIX/include prefix=$PREFIX" \
                  install --prefix=$PREFIX
 
+# Make sure the linked gfortran libraries are searched for on the RPATH.
+if [[ `uname` == 'Darwin' ]]; then
+    WRAPPER_LIB=$(find $PREFIX/lib/python2.7/site-packages -name '_stat_tool.so')
+    #otool -L $WRAPPER_LIB
+    install_name_tool -change build-scons/lib/libvpstat_tool.dylib $PREFIX/lib/libvpstat_tool.dylib $WRAPPER_LIB
+fi
+
 cp -R build-scons/lib/* $PREFIX/lib
 cp -R build-scons/include/* $PREFIX/include
 

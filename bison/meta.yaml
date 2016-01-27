@@ -14,9 +14,11 @@ about:
 requirements:
   build:
     - m4 # [linux]
-  
+    - flex
+
   run:
     - m4 # [linux]
+    - flex
 
 extra:
   note: bison is not relocatable, that means that bison --print-datadir return wrong dir but you can define an env var BISON_PKGDATADIR to change it. Search "bison relocatable"
