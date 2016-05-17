@@ -3,8 +3,9 @@ package:
   version: 1.2.1
 
 source:
-  # git_url: https://github.com/openalea/sconsx
-  path : /Users/pradal/devlp/git/openalea/sconsx
+  git_url: https://github.com/pradal/sconsx
+  git_tag: conda
+  # path : /Users/pradal/devlp/git/openalea/sconsx
 requirements:
   build:
     - python
