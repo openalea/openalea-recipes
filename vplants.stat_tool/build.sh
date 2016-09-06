@@ -28,6 +28,7 @@ build_prefix=$PREFIX/stattool build_includedir=$PREFIX/include build_libdir=$PRE
 vplants_tool_lib=$PREFIX/lib vplants_tool_include=$PREFIX/include  \
 build
 
+$PYTHON setup.py install --prefix=$PREFIX --single-version-externally-managed --record record.txt
 # Make sure the linked gfortran libraries are searched for on the RPATH.
 #if [[ `uname` == 'Darwin' ]]; then
 #    WRAPPER_LIB=$(find $PREFIX/lib/python2.7/site-packages -name '_stat_tool.so')
