@@ -1,0 +1,14 @@
+package:
+  name: qhull
+  version: 2012.1
+
+source:
+  fn: qhull-2012.1.zip [win]
+  url: http://www.qhull.org/download/qhull-2012.1.zip [win]
+  md5: 32c1d151744fe17c64f28b99ccc2ee50 [win]
+  fn: qhull-2012.1-src.tgz [unix]
+  url: http://www.qhull.org/download/qhull-2012.1-src.tgz [unix]
+  md5: d0f978c0d8dfb2e919caefa56ea2953c [unix]
+
+about:
+  home: http://www.qhull.org/

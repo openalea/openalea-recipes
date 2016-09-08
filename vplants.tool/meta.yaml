@@ -1,0 +1,31 @@
+package:
+  name: vplants.tool
+  version: 1.2.0
+
+source:
+  git_url: https://github.com/pradal/StructureAnalysis
+  git_tag: conda
+
+about:
+  home: http://openalea.gforge.inria.fr
+  license: GPL/LGPL
+  summary: Tool for stat and sequence analysis
+
+# needs boost - this is now in defaults.  the ioos boost is broken (and has been
+# deprecated but still appears in the channel - 2015-08-02)
+
+requirements:
+  # it doesn't really require python, but maybe that will fix
+  # the missing bin directory
+  build:
+   - python
+   - setuptools
+   - openalea.deploy
+   - scons
+   - openalea.sconsx
+   - readline
+   - qt
+  run:
+   - python
+   - readline
+   - qt

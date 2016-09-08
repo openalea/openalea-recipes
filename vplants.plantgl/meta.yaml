@@ -1,0 +1,39 @@
+package:
+  name: vplants.plantgl
+  version: 2.14.0
+
+source:
+  git_url: https://github.com/openalea/plantgl
+
+about:
+  home: http://openalea.gforge.inria.fr
+  license: GPL/LGPL
+  summary: An open-source graphic toolkit for the creation, simulation and analysis of 3D virtual plants.
+
+build:
+  preserve_egg_dir: True
+
+requirements:
+  # it doesn't really require python, but maybe that will fix
+  # the missing bin directory
+  build:
+   - python
+   - setuptools
+   - openalea.deploy
+   - scons
+   - openalea.sconsx
+   - readline
+   - qt
+   - boost
+   - bison
+   - flex
+   - cgal
+   - gmp
+   - eigen3
+   - qhull
+  run:
+   - python
+   - readline
+   - qt
+   - cgal
+
