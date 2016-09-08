@@ -12,6 +12,7 @@ requirements:
   run:
     - python
     - scons
+    - openalea.deploy
 
 about:
   home: http://openalea.gforge.inria.fr/
