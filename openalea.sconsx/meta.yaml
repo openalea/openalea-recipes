@@ -17,6 +17,11 @@ requirements:
     - scons
     - openalea.deploy
 
+test:
+  imports:
+    - SCons
+    - openalea.sconsx
+
 about:
   home: http://openalea.gforge.inria.fr/
   license: Cecill-c License
