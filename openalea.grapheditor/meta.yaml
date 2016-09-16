@@ -14,6 +14,10 @@ requirements:
     - setuptools
     - openalea.deploy
   run:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.core
     - openalea.vpltk
 
 test:
