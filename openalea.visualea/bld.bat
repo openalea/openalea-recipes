@@ -1,5 +1,5 @@
 cd visualea
-"%PYTHON%" setup.py install --single-version-externally-managed --prefix="%PREFIX%"
+"%PYTHON%" setup.py install --single-version-externally-managed --record=record.txt --prefix="%PREFIX%"
 cd ..
 if errorlevel 1 exit 1
 
