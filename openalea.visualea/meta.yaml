@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/openalea/openalea
-#  git_url: ../../../git/openalea
+
 
 build:
   preserve_egg_dir: True
@@ -14,16 +14,21 @@ requirements:
     - python
     - setuptools
     - openalea.deploy
-    - openalea.core
-    - openalea.grapheditor
     - mingw # [win]
+
   run:
     - python
     - setuptools
+    - openalea.deploy
     - openalea.core
+    - openalea.misc
+    - openalea.vpltk
     - openalea.grapheditor
+    - openalea.oalab
     - pyqt
     - ipython ==2.4.1
+    - ipython-qtconsole ==2.4.1
+
 about:
   home: http://openalea.gforge.inria.fr/
   license: Cecill-C License
