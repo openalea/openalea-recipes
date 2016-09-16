@@ -21,10 +21,12 @@ requirements:
     - setuptools
     - openalea.deploy
     - openalea.core
+    - openalea.misc
     - openalea.vpltk
     - openalea.grapheditor
     - pyqt
     - ipython ==2.4.1
+    - ipython-qtconsole ==2.4.1
 
 about:
   home: http://openalea.gforge.inria.fr/
