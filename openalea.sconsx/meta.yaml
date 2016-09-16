@@ -5,6 +5,9 @@ package:
 source:
   git_url: https://github.com/openalea/sconsx
 
+build:
+  preserve_egg_dir: True
+
 requirements:
   build:
     - python
