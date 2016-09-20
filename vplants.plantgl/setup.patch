@@ -1,0 +1,135 @@
+diff --git a/setup.py b/setup.py
+index 6c96175..1845355 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,26 +15,26 @@ for key,value in metadata.iteritems():
+ 
+ 
+ # Setup script
+-meta_version = version 
++meta_version = version
+ version = versionreader.getPGLVersionString()
+ if meta_version != version:
+     print 'Warning:: Update the version in metainfo.ini !!'
+ print pkg_name,': version =',version
+ 
+ # Scons build directory
+-build_prefix= "build-scons"
++#build_prefix= "build-scons"
+ 
+ if sys.platform.startswith('win'):
+     install_requires = ["boost", "qhull"]#, "qt4"]
+-    #setup_requires = install_requires +['qt4-dev'] 
++    #setup_requires = install_requires +['qt4-dev']
+     install_requires = [ binary_deps(i) for i in install_requires ]
+ #else:
+ install_requires = []
+ setup_requires = []
+-#if sys.platform.startswith('win'): 
++#if sys.platform.startswith('win'):
+     #setup_requires.append(["bisonflex"])
+ 
+-pylint_dir = os.path.join('src', 'plantgl')
++#pylint_dir = os.path.join('src', 'plantgl')
+ 
+ # Main setup
+ setup(
+@@ -50,34 +50,34 @@ setup(
+     # Define what to execute with scons
+     # scons is responsible to put compiled library in the write place
+     # ( lib/, package/, etc...)
+-    scons_scripts = ['SConstruct'],
+-    scons_parameters = ["build_prefix="+build_prefix],
++ #   scons_scripts = ['SConstruct'],
++ #   scons_parameters = ["build_prefix="+build_prefix],
+ 
+     namespace_packages = ["openalea", "vplants"],
+     create_namespaces = True,
+ 
+-    py_modules = ["pgl_postinstall",],
++#    py_modules = ["pgl_postinstall",],
+     # pure python  packages
+-    packages= [ "vplants", 
++    packages= [ "vplants",
+                 "vplants.plantgl",
+-                pkg_name, 
+-                pkg_name+'.math', 
+-                pkg_name+'.scenegraph', 
++                pkg_name,
++                pkg_name+'.math',
++                pkg_name+'.scenegraph',
+                 pkg_name+'.algo',
+-                pkg_name+'.oaplugins', 
+-                pkg_name+'.gui', 
++                pkg_name+'.oaplugins',
++                pkg_name+'.gui',
+                 pkg_name+'.gui3',
+                 pkg_name+'.wralea',
+-                pkg_name+'.wralea.demos', 
+-                pkg_name+'.wralea.edition', 
+-                pkg_name+'.wralea.objects', 
+-                pkg_name+'.wralea.operator', 
+-                pkg_name+'.wralea.visualization', 
++                pkg_name+'.wralea.demos',
++                pkg_name+'.wralea.edition',
++                pkg_name+'.wralea.objects',
++                pkg_name+'.wralea.operator',
++                pkg_name+'.wralea.visualization',
+                 pkg_name+'.wralea.dresser',
+                 pkg_name+'.ext',
+                 pkg_name+'.codec'
+                 ],
+-    
++
+     # python packages directory
+     package_dir= { pkg_name : pj('src','plantgl'),
+                    '' : 'src',
+@@ -89,20 +89,20 @@ setup(
+     zip_safe = False,
+ 
+     # Specific options of openalea.deploy
+-    lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
+-    bin_dirs = {'bin':  pj(build_prefix, 'bin'),},
+-    inc_dirs = { 'include' : pj(build_prefix, 'include') },
++#    lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
++#    bin_dirs = {'bin':  pj(build_prefix, 'bin'),},
++#    inc_dirs = { 'include' : pj(build_prefix, 'include') },
+     share_dirs = { 'share' : 'share'},
+-    postinstall_scripts = ['pgl_postinstall',],
++#    postinstall_scripts = ['pgl_postinstall',],
+ 
+ 
+     # Scripts
+     #entry_points = { 'gui_scripts': [ 'pglviewer = openalea.plantgl:start_viewer',]},
+     entry_points = {
+-        "wralea": ['plantgl.edition = openalea.plantgl.wralea.edition', 
+-                   'plantgl.objects = openalea.plantgl.wralea.objects', 
+-                   'plantgl.visualization = openalea.plantgl.wralea.visualization', 
+-                   'plantgl.operator = openalea.plantgl.wralea.operator', 
++        "wralea": ['plantgl.edition = openalea.plantgl.wralea.edition',
++                   'plantgl.objects = openalea.plantgl.wralea.objects',
++                   'plantgl.visualization = openalea.plantgl.wralea.visualization',
++                   'plantgl.operator = openalea.plantgl.wralea.operator',
+                    'plantgl.dresser = openalea.plantgl.wralea.dresser',
+                    'plantgl.demos = openalea.plantgl.wralea.demos',
+                    ],
+@@ -119,15 +119,15 @@ setup(
+             ],
+               },
+ 
+- 
++
+     # Dependencies
+     setup_requires = setup_requires + ['openalea.deploy'],
+     install_requires = install_requires,
+-    dependency_links = ['http://openalea.gforge.inria.fr/pi'],
+-    pylint_packages = [ pylint_dir + os.sep + x.replace('.', os.sep) for x in find_packages(pylint_dir) if x not in ['gui']],
++#    dependency_links = ['http://openalea.gforge.inria.fr/pi'],
++#    pylint_packages = [ pylint_dir + os.sep + x.replace('.', os.sep) for x in find_packages(pylint_dir) if x not in ['gui']],
+ 
+    )
+ 
+ 
+ 
+-    
++
