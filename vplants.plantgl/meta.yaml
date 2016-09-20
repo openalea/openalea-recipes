@@ -37,6 +37,13 @@ requirements:
   run:
    - python
    - readline
-   - qt
+   - qt <5
    - cgal
+   - qhull
+   - boost
+
+#test:
+  # Python imports
+#  imports:
+#    - openalea.plantgl
 

@@ -33,7 +33,7 @@ mpfr_includes=$PREFIX/include mpfr_lib=$PREFIX/lib WITH_MPFR=True \
 WITH_LAPACK=False \
 WITH_EIGEN=True eigen_includes=$PREFIX/include/eigen3 \
 EXTRA_CXXFLAGS='-DCGAL_CFG_NO_CPP0X_VARIADIC_TEMPLATES -DWITH_QHULL_2011' \
-build
+num_jobs=$CPU_COUNT build
 
 echo 'PYTHON SETUP.PY INSTALL'
 
