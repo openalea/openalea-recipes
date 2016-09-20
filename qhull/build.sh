@@ -1,4 +1,5 @@
 set -e
 
-make DESTDIR="$PREFIX"
-make DESTDIR="$PREFIX" install
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX .
+make
+make install

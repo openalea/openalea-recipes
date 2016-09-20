@@ -12,3 +12,9 @@ source:
 
 about:
   home: http://www.qhull.org/
+
+requirements:
+  # it doesn't really require python, but maybe that will fix
+  # the missing bin directory
+  build:
+   - cmake
