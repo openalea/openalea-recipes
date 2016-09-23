@@ -18,12 +18,14 @@ requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
-   - boost
+   - boost ==1.57
    - python
    - cmake
    - mpfr
    - gmp
+   - qt <5
   run:
-   - boost
+   - boost ==1.57
    - gmp
    - mpfr
+   - qt <5
