@@ -3,8 +3,8 @@ package:
   version: 1.2.0
 
 source:
-  git_url: https://github.com/pradal/StructureAnalysis
-  git_tag: conda
+  git_url: https://github.com/VirtualPlants/StructureAnalysis
+  #git_tag: conda
 
 about:
   home: http://openalea.gforge.inria.fr
@@ -24,8 +24,8 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt
+   - qt ==4.8.7-3
   run:
    - python
    - readline
-   - qt
+   - qt ==4.8.7-3
