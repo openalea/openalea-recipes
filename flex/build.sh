@@ -1,6 +1,7 @@
 #!/bin/bash
 
-./configure --disable-dependency-tracking --disable-shared --prefix="$PREFIX"
+
+./configure --disable-dependency-tracking --disable-shared  --prefix="$PREFIX"
 make
 make install
 
