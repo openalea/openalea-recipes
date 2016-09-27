@@ -1,0 +1,66 @@
+package:
+  name: vplants.lpy
+  version: 2.5.1
+
+source:
+  git_url: https://github.com/openalea/lpy
+  patches:
+   # List any patch files here
+   - setup.patch
+
+about:
+  home: http://openalea.gforge.inria.fr
+  license: GPL/LGPL
+  summary: A Python version of Lindenmayer Systems.
+
+build:
+  preserve_egg_dir: True
+  number: 1
+
+requirements:
+  # it doesn't really require python, but maybe that will fix
+  # the missing bin directory
+  build:
+   #- gcc 4.8.5 # [linux]
+   #- gcc 4.8.5 # [osx]
+   - python
+   - m4
+   - setuptools
+   - openalea.deploy
+   - scons
+   - openalea.sconsx
+   - readline
+   - qt ==4.8.6
+   - boost 1.61.0
+   - bison
+   - flex 2.5.39
+   - cgal 4.9
+   - gmp 6.1.1
+   - ann
+   - eigen 3.2.8
+   - qhull
+   - vplants.plantgl
+  run:
+   #- gcc 4.8.5 # [linux]
+   #- gcc 4.8.5 # [osx]
+   #- libgcc
+   - python
+   - readline
+   - qt ==4.8.6
+   - gmp 6.1.1
+   - mpfr
+   - cgal 4.9
+   - qhull
+   - ann
+   - boost 1.61.0
+   - vplants.plantgl
+   - openalea.core
+   - openalea.vpltk
+   - openalea.oalab
+   - pyopengl
+
+#test:
+  # Python imports
+  #imports:
+  #  - openalea.plantgl
+
