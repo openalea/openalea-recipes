@@ -8,7 +8,7 @@ scons QTDIR=$PREFIX QT4_BINPATH=$PREFIX/bin QT4_CPPPATH=$PREFIX/include QT4_LIBP
 python_includes=$PREFIX/include/python2.7 python_libpath=$PREFIX/lib \
 boost_includes=$PREFIX/include boost_lib=$PREFIX/lib \
 openalea_lib=$PREFIX/lib openalea_includes=$PREFIX/include \
-build_prefix=$PREFIX/plantgl build_includedir=$PREFIX/include build_libdir=$PREFIX/lib build_bindir=$PREFIX/bin \
+build_prefix=$PREFIX/lpy build_includedir=$PREFIX/include build_libdir=$PREFIX/lib build_bindir=$PREFIX/bin \
 WITH_CGAL=True cgal_includes=$PREFIX/include cgal_libpath=$PREFIX/lib \
 bison_bin=$PREFIX/bin flex_bin=$PREFIX/bin flex_libpath=$PREFIX/lib flex_include=$PREFIX/include \
 readline_includes=$PREFIX/include readline_lib=$PREFIX/lib \
