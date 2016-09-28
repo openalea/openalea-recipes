@@ -24,8 +24,8 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt ==4.8.7-3
+   - qt ==4.8.6
   run:
    - python
    - readline
-   - qt ==4.8.7-3
+   - qt ==4.8.6
