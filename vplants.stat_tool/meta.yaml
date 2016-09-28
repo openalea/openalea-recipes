@@ -26,11 +26,12 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt
+   - qt ==4.8.6
    - vplants.tool
-   - boost
+   - boost 1.61.0
   run:
    - python
    - readline
-   - qt
+   - qt ==4.8.6
    - vplants.tool
+   - boost 1.61.0
