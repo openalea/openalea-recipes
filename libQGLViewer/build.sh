@@ -21,9 +21,8 @@ cd build
 
 export QMAKESPEC=macx-g++
 
-qmake ../libQGLViewer.pro
+qmake PREFIX=$PREFIX ../libQGLViewer.pro
 
 make
 make install
-
 cd ..

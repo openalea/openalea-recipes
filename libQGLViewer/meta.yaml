@@ -8,6 +8,8 @@ source:
   patches:
    # List any patch files here
    - QGLViewer_pro.patch
+   - examples.pri.patch
+   - libQGLViewer.pro.patch
 
 
 build:

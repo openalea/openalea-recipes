@@ -1,0 +1,12 @@
+diff --git a/libQGLViewer.pro b/libQGLViewer.pro
+index 628fa75..b71c01f 100644
+--- a/libQGLViewer.pro
++++ b/libQGLViewer.pro
+@@ -1,6 +1,6 @@
+ CONFIG       += ordered
+ TEMPLATE      = subdirs
+-SUBDIRS       = QGLViewer examples designerPlugin
++SUBDIRS       = QGLViewer
+ 
+ QT_VERSION=$$[QT_VERSION]
+ 
