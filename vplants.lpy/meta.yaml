@@ -30,7 +30,8 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt ==4.8.6
+   - qt ==4.8.6 [osx]
+   - qt ==4.8.7 [linux]
    - boost 1.61.0
    - bison
    - flex 2.5.39
