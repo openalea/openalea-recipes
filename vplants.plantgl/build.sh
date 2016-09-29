@@ -4,6 +4,8 @@
 # Set all the scons option explicitly
 
 #echo `which g++`
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+
 scons QTDIR=$PREFIX QT4_BINPATH=$PREFIX/bin QT4_CPPPATH=$PREFIX/include QT4_LIBPATH=$PREFIX/lib QT4_FRAMEWORK=False \
 python_includes=$PREFIX/include/python2.7 python_libpath=$PREFIX/lib \
 boost_includes=$PREFIX/include boost_lib=$PREFIX/lib \
