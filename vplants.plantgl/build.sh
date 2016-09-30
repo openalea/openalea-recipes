@@ -7,6 +7,7 @@
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 
 scons QTDIR=$PREFIX QT4_BINPATH=$PREFIX/bin QT4_CPPPATH=$PREFIX/include QT4_LIBPATH=$PREFIX/lib QT4_FRAMEWORK=False \
+gl_include=$PREFIX/include gl_lib=$PREFIX/lib \
 python_includes=$PREFIX/include/python2.7 python_libpath=$PREFIX/lib \
 boost_includes=$PREFIX/include boost_lib=$PREFIX/lib \
 openalea_lib=$PREFIX/lib openalea_includes=$PREFIX/include \
