@@ -1,0 +1,52 @@
+{% set version = "6.2" %}
+
+package:
+  name: readline
+  version: {{ version }}
+
+source:
+  url: ftp://ftp.gnu.org/gnu/readline/readline-{{ version }}.tar.gz
+  fn: readline-{{ version }}.tar.gz
+  md5: 67948acb2ca081f23359d0256e9a271c
+  patches:
+    - patches/readline62-001
+    - patches/readline62-002
+    - patches/readline62-003
+    - patches/readline62-004
+    - patches/readline62-005
+
+build:
+  skip: true  # [win]
+  number: 0
+
+requirements:
+  build:
+    - pkg-config
+    - ncurses 5.9*
+  run:
+    - ncurses 5.9*
+
+test:
+  commands:
+  {% set readline_libs = [
+    'libreadline',
+    'libhistory'
+  ] %}
+  {% for lib in readline_libs %}
+    - test -f ${PREFIX}/lib/{{ lib }}.a
+    - test -f ${PREFIX}/lib/{{ lib }}.so      # [linux]
+    - test -f ${PREFIX}/lib/{{ lib }}.dylib   # [osx]
+  {% endfor %}
+
+about:
+  home: https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
+  license: GPL3
+  summary: library for editing command lines as they are typed in
+
+extra:
+  recipe-maintainers:
+    - croth1
+    - jakirkham
+    - jjhelmus
+    - pelson
+    - msarahan
