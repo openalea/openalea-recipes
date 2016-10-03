@@ -21,8 +21,6 @@ requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
-   #- gcc 4.8.5 # [linux]
-   #- gcc 4.8.5 # [osx]
    - python
    - m4
    - setuptools
@@ -32,29 +30,31 @@ requirements:
    - readline
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
-   - boost 
+   - boost 1.61.0 [osx]
+   - boost [linux]
    - bison
-   - flex 
-   - cgal 
+   - flex 2.5.39
+   - cgal 4.9 [osx]
+   - cgal  [linux]
    - gmp 
    - ann
-   - eigen 
+   - eigen 3.2.8 [osx]
+   - eigen [linux]
    - qhull
    - vplants.plantgl
   run:
-   #- gcc 4.8.5 # [linux]
-   #- gcc 4.8.5 # [osx]
-   #- libgcc
    - python
    - readline
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
    - gmp 
    - mpfr
-   - cgal
+   - cgal 4.9 [osx]
+   - cgal  [linux]
    - qhull
    - ann
-   - boost 
+   - boost 1.61.0 [osx]
+   - boost [linux]
    - vplants.plantgl
    - openalea.core
    - openalea.vpltk
