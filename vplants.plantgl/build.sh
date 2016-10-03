@@ -14,8 +14,6 @@ openalea_lib=$PREFIX/lib openalea_includes=$PREFIX/include \
 build_prefix=$SRC_DIR/build-scons build_includedir=$PREFIX/include build_libdir=$PREFIX/lib build_bindir=$PREFIX/bin \
 WITH_CGAL=True cgal_includes=$PREFIX/include cgal_libpath=$PREFIX/lib \
 bison_bin=$PREFIX/bin flex_bin=$PREFIX/bin flex_libpath=$PREFIX/lib flex_include=$PREFIX/include \
-readline_includes=$PREFIX/include readline_lib=$PREFIX/lib \
-termcap_includes=$PREFIX/include termcap_lib=$PREFIX/lib WITH_NCURSES=True \
 pthread_includes=$PREFIX/include pthread_lib=$PREFIX/lib \
 WITH_QHULL_2011=True qhull_includes=$PREFIX/include qhull_lib=$PREFIX/lib \
 gmp_includes=$PREFIX/include gmp_libpath=$PREFIX/lib WITH_GMP=True \
