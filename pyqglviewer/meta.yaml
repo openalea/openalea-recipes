@@ -23,7 +23,8 @@ requirements:
   build:
     - python
     - sip
-    - qt 4.8.6
+    - qt 4.8.6 [osx]
+    - qt 4.8.7 [linux]
     - pyqt
     - libqglviewer
 
@@ -31,7 +32,8 @@ requirements:
     # python dependency is here due to libboost-python library that depends on
     # python version
     - python
-    - qt 4.8.6
+    - qt 4.8.6 [osx]
+    - qt 4.8.7 [linux]
     - pyqt
     - libqglviewer
     - pyopengl
