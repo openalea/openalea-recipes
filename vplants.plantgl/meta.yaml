@@ -31,17 +31,19 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
+   - ncurses
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
-   - boost 1.61.0
+   - boost
    - bison
-   - flex 2.5.39
-   - cgal 4.9
-   - gmp 6.1.1
+   - flex 
+   - cgal 
+   - gmp 
    - ann
-   - eigen 3.2.8
+   - eigen
    - qhull
    - freeglut [linux]
+   - patchelf
   run:
    #- gcc 4.8.5 # [linux]
    #- gcc 4.8.5 # [osx]
@@ -50,13 +52,14 @@ requirements:
    - readline
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
-   - gmp 6.1.1
+   - gmp 
    - mpfr
-   - cgal 4.9
+   - cgal
    - qhull
    - ann
-   - boost 1.61.0
+   - boost
    - freeglut [linux]
+   - ncurses
 
 #test:
   # Python imports

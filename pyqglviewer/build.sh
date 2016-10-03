@@ -10,12 +10,17 @@ then
 
     export MACOSX_VERSION_MIN=10.7
     export CXXFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    export CXXFLAGS="${CXXFLAGS} -stdlib=libc++ -std=c++11"
+export CXXFLAGS="${CXXFLAGS} -stdlib=libc++ -std=c++11"
     export LINKFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    export LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -std=c++11 "
+export LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -std=c++11 "
+    export QMAKESPEC=macx-g++
 fi
 
-export QMAKESPEC=macx-g++
+if [ "$(uname)" == "Linux" ];
+then
+    export QMAKESPEC=linux-g++
+fi
+
 
 python configure.py -I $PREFIX/include \
 -I $PREFIX/include/Qt -I $PREFIX/include/QtCore -I $PREFIX/include/QtOpenGL -I $PREFIX/include/QtXml -I $PREFIX/include/QtGUI \

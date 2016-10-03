@@ -13,16 +13,25 @@ then
     export CXXFLAGS="${CXXFLAGS} -stdlib=libc++ -std=c++11"
     export LINKFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
     export LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -std=c++11 "
+
+    export QMAKESPEC=macx-g++
+
 fi
 
+if [ "$(uname)" == "Linux" ];
+then
+
+    export QMAKESPEC=linux-g++
+fi
 
 [ -d build ]] || mkdir build
 cd build
 
-export QMAKESPEC=macx-g++
 
-qmake PREFIX=$PREFIX ../libQGLViewer.pro
+qmake PREFIX=$PREFIX NO_QT_VERSION_SUFFIX=1 ../libQGLViewer.pro
 
 make
 make install
 cd ..
+
+
