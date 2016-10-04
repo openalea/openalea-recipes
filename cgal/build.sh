@@ -8,5 +8,4 @@
 # from https://github.com/rustychris/conda-recipes/
 
 cmake -DGMP_LIBRARIES="-L$PREFIX/lib -lgmp" -DGMP_INCLUDE_DIR=$PREFIX/include -DCMAKE_INSTALL_PREFIX=$PREFIX -DWITH_CGAL_ImageIO:BOOL=OFF -DWITH_CGAL_Qt4:BOOL=OFF .
-make
-make install
+make install  -j${CPU_COUNT}
