@@ -15,7 +15,7 @@ about:
 
 build:
   preserve_egg_dir: True
-  number: 2
+  number: 3
 
 requirements:
   # it doesn't really require python, but maybe that will fix
