@@ -1,0 +1,40 @@
+diff --git a/amlobj/setup.py b/amlobj/setup.py
+index 60d930c..2e548de 100644
+--- a/amlobj/setup.py
++++ b/amlobj/setup.py
+@@ -13,10 +13,10 @@ for key,value in metadata.iteritems():
+ 
+ 
+ 
+-build_prefix = "build-scons"
++#build_prefix = "build-scons"
+ 
+ # Scons build directory
+-scons_parameters=["build_prefix="+build_prefix]
++#scons_parameters=["build_prefix="+build_prefix]
+ 
+ # dependencies
+ setup_requires = install_requires =[]
+@@ -36,17 +36,17 @@ if __name__ == '__main__':
+           license='GPL',
+ 
+           # Define where to execute scons
+-          scons_scripts=['SConstruct'],
+-          # Scons parameters  
+-          scons_parameters=scons_parameters,
++          # scons_scripts=['SConstruct'],
++          # Scons parameters
++          # scons_parameters=scons_parameters,
+ 
+           # Add package platform libraries if any
+           include_package_data=True,
+           zip_safe = False,
+ 
+           # Specific options of openalea.deploy
+-          lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
+-          inc_dirs = { 'include' : pj(build_prefix, 'include') },
++          # lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
++          # inc_dirs = { 'include' : pj(build_prefix, 'include') },
+ 
+           # Dependencies
+           setup_requires = setup_requires,
