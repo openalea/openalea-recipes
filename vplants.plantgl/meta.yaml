@@ -29,11 +29,11 @@ requirements:
    - openalea.sconsx
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
-   - boost 1.61.0 [osx]
+   - boost [osx]
    - boost [linux]
    - bison
    - flex 2.5.39
-   - cgal 4.9 [osx]
+   - cgal [osx]
    - cgal [linux]
    - gmp 6.1.1 [osx]
    - gmp  [linux]
@@ -46,13 +46,13 @@ requirements:
    - python
    - qt ==4.8.6 [osx]
    - qt ==4.8.7 [linux]
-   - gmp 
+   - gmp
    - mpfr
-   - cgal 4.9 [osx]
+   - cgal [osx]
    - cgal [linux]
    - qhull
    - ann
-   - boost 1.61.0 [osx]
+   - boost [osx]
    - boost [linux]
 
 #test:
