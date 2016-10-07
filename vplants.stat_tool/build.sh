@@ -23,9 +23,10 @@ vplants_tool_lib=$PREFIX/lib vplants_tool_include=$PREFIX/include  \
 python_includes=$PREFIX/include/python2.7 python_libpath=$PREFIX/lib \
 boost_includes=$PREFIX/include boost_lib=$PREFIX/lib \
 openalea_lib=$PREFIX/lib openalea_includes=$PREFIX/include \
-build_prefix=$PREFIX/libvpstattool build_includedir=$PREFIX/include build_libdir=$PREFIX/lib build_bindir=$PREFIX/bin \
+pthread_includes=$PREFIX/include pthread_lib=$PREFIX/lib \
+build_prefix=$SRC_DIR/build-scons build_includedir=$PREFIX/include build_libdir=$PREFIX/lib build_bindir=$PREFIX/bin \
 EXTRA_CXXFLAGS="${CXXFLAGS}" EXTRA_LINKFLAGS="${LINKFLAGS}" \
 num_jobs=$CPU_COUNT build
 
-PYTHON setup.py install --prefix=$PREFIX
+#PYTHON setup.py install --prefix=$PREFIX
 cd ..
