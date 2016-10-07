@@ -1,0 +1,36 @@
+package:
+  name: alinea.caribu
+  version: 7.0.0
+
+source:
+  git_url: https://github.com/openalea-incubator/caribu
+
+
+build:
+  preserve_egg_dir: True
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+    - scons
+    - openalea.sconsx
+  run:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.core
+    - numpy
+    - matplotlib
+    - vplants.plantgl
+    - openalea.mtg
+
+test:
+  imports:
+    - alinea.caribu
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: INRA License
+  summary: Eco-physiological model of light interception by plants
