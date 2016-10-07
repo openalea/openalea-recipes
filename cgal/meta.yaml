@@ -24,7 +24,7 @@ requirements:
    - mpfr
    - gmp
    - qt <5
-   - patchelf
+   - patchelf [linux]
   run:
    - boost 1.57.0
    - gmp
