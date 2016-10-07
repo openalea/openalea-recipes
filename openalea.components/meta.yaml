@@ -8,6 +8,7 @@ source:
 
 build:
   preserve_egg_dir: True
+  number: 1
 
 requirements:
   build:
@@ -15,6 +16,7 @@ requirements:
     - setuptools
     - openalea.deploy
     - openalea.misc
+    - openalea.core
   run:
     - python
     - setuptools
