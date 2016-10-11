@@ -16,6 +16,7 @@ about:
 # needs boost - this is now in defaults.  the ioos boost is broken (and has been
 # deprecated but still appears in the channel - 2015-08-02)
 build:
+  preserve_egg_dir: True
   number: 0
 
 requirements:

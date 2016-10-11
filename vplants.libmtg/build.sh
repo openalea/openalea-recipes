@@ -38,5 +38,5 @@ vplants_amlobj_include=$PREFIX/include vplants_amlobj_lib==$PREFIX/lib \
 EXTRA_CXXFLAGS="${CXXFLAGS}" EXTRA_LINKFLAGS="${LINKFLAGS}" \
 num_jobs=1 build
 
-#$PYTHON setup.py install --prefix=$PREFIX
+$PYTHON setup.py install --prefix=$PREFIX
 cd ..
