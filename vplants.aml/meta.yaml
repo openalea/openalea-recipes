@@ -17,7 +17,7 @@ about:
 # deprecated but still appears in the channel - 2015-08-02)
 build:
   preserve_egg_dir: True
-  number: 1
+  number: 2
 
 requirements:
   # it doesn't really require python, but maybe that will fix
@@ -48,4 +48,5 @@ requirements:
    - vplants.libmtg
    - vplants.stat_tool
    - vplants.sequence_analysis
+   - gnuplot
 
