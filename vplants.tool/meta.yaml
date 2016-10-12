@@ -25,8 +25,10 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
   run:
    - python
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
