@@ -22,13 +22,15 @@ requirements:
     - pkg-config [osx]
     - libgd
     - ncurses {{CONDA_NCURSES}}*
-    - qt 4.8.6
+    - qt 4.8.6 [osx]
+    - qt 4.8.7 [linux]
     - readline
   run:
     - libgcc [not osx]
     - libgd
     - ncurses {{CONDA_NCURSES}}*
-    - qt 4.8.6
+    - qt 4.8.6 [osx]
+    - qt 4.8.7 [linux]
     - readline
 
 about:
