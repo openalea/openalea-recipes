@@ -1,0 +1,51 @@
+package:
+  name: vplants.aml
+  version: 1.2.0
+
+source:
+  git_url: https://github.com/VirtualPlants/AML
+  patches:
+   # List any patch files here
+   - setup.py.patch
+
+about:
+  home: http://openalea.gforge.inria.fr
+  license: GPL/LGPL
+  summary: AML language for plant architecture analysis
+
+# needs boost - this is now in defaults.  the ioos boost is broken (and has been
+# deprecated but still appears in the channel - 2015-08-02)
+build:
+  preserve_egg_dir: True
+  number: 1
+
+requirements:
+  # it doesn't really require python, but maybe that will fix
+  # the missing bin directory
+  build:
+   - python
+   - setuptools
+   - openalea.deploy
+   - scons
+   - openalea.sconsx
+   - readline
+   - qt ==4.8.6
+   - vplants.tool
+   - vplants.stat_tool
+   - vplants.sequence_analysis
+   - vplants.amlobj
+   - vplants.plantgl
+   - vplants.libmtg
+   - bison
+   - flex 2.5.39
+  run:
+   - python
+   - readline
+   - qt ==4.8.6
+   - vplants.tool
+   - vplants.amlobj
+   - vplants.plantgl
+   - vplants.libmtg
+   - vplants.stat_tool
+   - vplants.sequence_analysis
+

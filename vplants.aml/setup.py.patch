@@ -1,0 +1,125 @@
+diff --git a/aml/setup.py b/aml/setup.py
+index 1727d5f..7ee487c 100644
+--- a/aml/setup.py
++++ b/aml/setup.py
+@@ -2,7 +2,7 @@
+ __revision__ = "$Id$"
+ 
+ from setuptools import setup, find_packages
+-from openalea.deploy.binary_deps import binary_deps
++#from openalea.deploy.binary_deps import binary_deps
+ import os, sys
+ from os.path import join as pj
+ 
+@@ -12,49 +12,49 @@ for key,value in metadata.iteritems():
+     exec("%s = '%s'" % (key, value))
+ 
+ 
+-build_prefix = "build-scons"
++#build_prefix = "build-scons"
+ 
+ # Scons build directory
+-scons_parameters=["build_prefix="+build_prefix]
++#scons_parameters=["build_prefix="+build_prefix]
+ 
+ 
+ # platform dependencies
+ install_requires=[]
+ """
+-install_requires = [binary_deps('vplants.amlobj'), 
++install_requires = [binary_deps('vplants.amlobj'),
+                     binary_deps('vplants.sequence_analysis'),
+-                    binary_deps('vplants.tree_matching'), 
+-                    binary_deps('vplants.mtg'), 
++                    binary_deps('vplants.tree_matching'),
++                    binary_deps('vplants.mtg'),
+                     ]
+ 
+ """
+ setup_requires = install_requires + ['openalea.deploy']
+ 
+ if __name__ == '__main__':
+-    
++
+     setup(name=name,
+           version=version,
+           author=authors,
+           description=description,
+           url=url,
+           license=license,
+-          
++
+           # Define where to execute scons
+-          scons_scripts=['SConstruct'],
+-          # Scons parameters  
+-          scons_parameters=scons_parameters,
+-          
+-        
++          #scons_scripts=['SConstruct'],
++          # Scons parameters
++          #scons_parameters=scons_parameters,
++
++
+           # Packages
+           namespace_packages = ['openalea', 'vplants'],
+           create_namespaces = True,
+ 
+-          packages=[namespace+".aml", namespace+".aml_wralea", 
++          packages=[namespace+".aml", namespace+".aml_wralea",
+                     namespace+".aml.amldoc",
+-                    namespace+".aml_wralea.wralea", 
+-                    namespace+".aml_wralea.demo", 
+-                    namespace+".aml_wralea.demo.change_point", 
+-                    namespace+".aml_wralea.demo.mtg", 
++                    namespace+".aml_wralea.wralea",
++                    namespace+".aml_wralea.demo",
++                    namespace+".aml_wralea.demo.change_point",
++                    namespace+".aml_wralea.demo.mtg",
+                     "vplants", "vplants.aml",
+                     "amlPy"],
+ 
+@@ -63,23 +63,23 @@ if __name__ == '__main__':
+                        namespace+".aml.amldoc" : "src/aml/amldoc",
+                        namespace+".aml_wralea.wralea" : "src/aml_wralea/wralea",
+                        namespace+".aml_wralea.demo" : "src/aml_wralea/demo",
+-                       namespace+".aml_wralea.demo.change_point" : "src/aml_wralea/demo/change_point", 
+-                       namespace+".aml_wralea.demo.mtg": "src/aml_wralea/demo/mtg", 
++                       namespace+".aml_wralea.demo.change_point" : "src/aml_wralea/demo/change_point",
++                       namespace+".aml_wralea.demo.mtg": "src/aml_wralea/demo/mtg",
+ 
+                        "amlPy" : "src/amlPy",
+                        "vplants": "src/vplants",
+                        "" : 'src',
+                        },
+-      
++
+           # Add package platform libraries if any
+           package_data = {namespace+".aml" : ['*.*'], "": ['*.mtg', '*.drf','*.smb','*.png', '*.hsc', '*.seq']},
+           include_package_data=True,
+           zip_safe = False,
+ 
+           # Specific options of openalea.deploy
+-          lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
+-          inc_dirs = { 'include' : pj(build_prefix, 'include') },
+-          bin_dirs = { 'bin':  pj(build_prefix, 'bin') },
++          #lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
++          #inc_dirs = { 'include' : pj(build_prefix, 'include') },
++          #bin_dirs = { 'bin':  pj(build_prefix, 'bin') },
+           share_dirs = { 'databases' : 'databases' },
+ 
+           # Dependencies
+@@ -90,11 +90,12 @@ if __name__ == '__main__':
+           # entry_points
+           entry_points = {
+             "wralea": ["aml = openalea.aml_wralea.wralea",
+-                       "demo = openalea.aml_wralea.demo"]
++                       "demo = openalea.aml_wralea.demo"],
++            "console_scripts": [],
+             },
+ 
+           pylint_packages = ['.']
+           )
+ 
+ 
+-    
++

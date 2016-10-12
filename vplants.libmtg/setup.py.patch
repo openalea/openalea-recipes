@@ -1,0 +1,50 @@
+diff --git a/mtg/setup.py b/mtg/setup.py
+index 42e9b26..d71d1c1 100644
+--- a/mtg/setup.py
++++ b/mtg/setup.py
+@@ -14,15 +14,15 @@ for key,value in metadata.iteritems():
+     exec("%s = '%s'" % (key, value))
+ 
+ # Scons build directory
+-build_prefix = "build-scons"
+-scons_parameters = ["build_prefix="+build_prefix]
++#build_prefix = "build-scons"
++#scons_parameters = ["build_prefix="+build_prefix]
+ 
+ 
+ # dependencies
+-install_requires = [binary_deps('vplants.amlobj'), 
++install_requires = [binary_deps('vplants.amlobj'),
+                     binary_deps('vplants.plantgl')]
+ install_requires = []
+-setup_requires = ['openalea.deploy'] 
++setup_requires = ['openalea.deploy']
+ 
+ if __name__ == '__main__':
+ 
+@@ -34,9 +34,9 @@ if __name__ == '__main__':
+           license=license,
+ 
+           # Define where to execute scons
+-          scons_scripts=['SConstruct'],
+-          # Scons parameters  
+-          scons_parameters=scons_parameters,
++          # scons_scripts=['SConstruct'],
++          # Scons parameters
++          # scons_parameters=scons_parameters,
+ 
+           # Packages
+           #packages=
+@@ -47,9 +47,9 @@ if __name__ == '__main__':
+           zip_safe = False,
+ 
+           # Specific options of openalea.deploy
+-          lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
+-          inc_dirs = { 'include' : pj(build_prefix, 'include') },
+-          
++          # lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
++          # inc_dirs = { 'include' : pj(build_prefix, 'include') },
++
+ 
+           # Dependencies
+           setup_requires = setup_requires,
