@@ -17,7 +17,7 @@ about:
 # deprecated but still appears in the channel - 2015-08-02)
 build:
   preserve_egg_dir: True
-  number: 0
+  number: 1
 
 requirements:
   # it doesn't really require python, but maybe that will fix
