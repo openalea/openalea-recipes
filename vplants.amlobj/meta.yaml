@@ -28,12 +28,14 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
    - vplants.tool
    - bison
    - flex 2.5.39
   run:
    - python
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
    - vplants.tool

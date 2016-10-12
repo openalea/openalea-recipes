@@ -24,7 +24,7 @@ build_prefix=$SRC_DIR/build-scons build_includedir=$PREFIX/include build_libdir=
 gl_include=$PREFIX/include gl_lib=$PREFIX/lib \
 python_includes=$PREFIX/include/python2.7 python_libpath=$PREFIX/lib \
 boost_includes=$PREFIX/include boost_lib=$PREFIX/lib \
-readline_includes=$PREFIX/include readline_lib=$PREFIX/lib termcap_includes=$PREFIX/include termcap_lib=$PREFIX/lib \
+readline_includes=$PREFIX/include readline_lib=$PREFIX/lib termcap_includes=$PREFIX/include termcap_lib=$PREFIX/lib WITH_NCURSES=True \
 pthread_includes=$PREFIX/include pthread_lib=$PREFIX/lib \
 bison_bin=$PREFIX/bin flex_bin=$PREFIX/bin flex_libpath=$PREFIX/lib flex_include=$PREFIX/include \
 WITH_EIGEN=True eigen_includes=$PREFIX/include/eigen3 \
@@ -36,7 +36,7 @@ vplants_plantgl_include=$PREFIX/include vplants_plantgl_lib==$PREFIX/lib \
 vplants_tool_include=$PREFIX/include vplants_tool_lib==$PREFIX/lib \
 vplants_amlobj_include=$PREFIX/include vplants_amlobj_lib==$PREFIX/lib \
 EXTRA_CXXFLAGS="${CXXFLAGS}" EXTRA_LINKFLAGS="${LINKFLAGS}" \
-num_jobs=1 build
+num_jobs=$CPU_COUNT build
 
 $PYTHON setup.py install --prefix=$PREFIX
 cd ..

@@ -29,7 +29,8 @@ requirements:
    - scons
    - openalea.sconsx
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
    - vplants.tool
    - vplants.amlobj
    - vplants.plantgl
@@ -38,7 +39,8 @@ requirements:
   run:
    - python
    - readline
-   - qt ==4.8.6
+   - qt 4.8.6 [osx]
+   - qt 4.8.7 [linux]
    - vplants.tool
    - vplants.amlobj
    - vplants.plantgl

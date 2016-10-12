@@ -28,5 +28,5 @@ build_prefix=$SRC_DIR/build-scons build_includedir=$PREFIX/include build_libdir=
 EXTRA_CXXFLAGS="${CXXFLAGS}" EXTRA_LINKFLAGS="${LINKFLAGS}" \
 num_jobs=$CPU_COUNT build
 
-#PYTHON setup.py install --prefix=$PREFIX
+$PYTHON setup.py install --prefix=$PREFIX
 cd ..
