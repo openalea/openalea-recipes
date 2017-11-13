@@ -8,7 +8,7 @@
 # Hints for OSX:
 # http://stackoverflow.com/questions/20108407/how-do-i-compile-boost-for-os-x-64b-platforms-with-stdlibc
 
-set -x -e
+set -ve
 
 INCLUDE_PATH="${PREFIX}/include"
 LIBRARY_PATH="${PREFIX}/lib"
@@ -40,7 +40,8 @@ if [ "$(uname)" == "Darwin" ]; then
         include="${INCLUDE_PATH}" \
         cxxflags="${CXXFLAGS}" \
         linkflags="${LINKFLAGS}" \
-        -j"$(sysctl -n hw.ncpu)" \
+        -j$CPU_COUNT \
+        -d0 \
         install | tee b2.log 2>&1
 fi
 
@@ -70,6 +71,9 @@ if [ "$(uname)" == "Linux" ]; then
         cxxflags="${CXXFLAGS}" \
         linkflags="${LINKFLAGS}" \
         --layout=system \
-        -j"${CPU_COUNT}" \
+        -j$CPU_COUNT \
+        -d0 \
         install | tee b2.log 2>&1
 fi
+
+set +ve
