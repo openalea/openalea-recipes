@@ -48,7 +48,7 @@ if [ "$(uname)" == "Linux" ]; then
 
     CXXFLAGS="${CXXFLAGS} -std=c++11"
     LINKFLAGS="${LINKFLAGS} -std=c++11 -L${LIBRARY_PATH}"
-    
+
     ./bootstrap.sh \
         --prefix="${PREFIX}" \
         --with-python="${PYTHON}" \
