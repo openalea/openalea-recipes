@@ -2,6 +2,7 @@ language: cpp
 
 os:
   - linux
+  - osx
 
 sudo: required
 
@@ -13,9 +14,10 @@ env:
    CONDA_VERSION=2
    ANACONDA_UPLOAD=artzet_s
    ANACONDA_LABEL=main
+   TRAVIS_WAIT=40
 
 install:
-  - git clone https://github.com/OpenAlea/travis-ci.git
+  - git clone https://github.com/openalea/travis-ci.git
   - cd travis-ci
   - source install.sh
 
