@@ -40,7 +40,7 @@ if [ "$(uname)" == "Darwin" ]; then
         include="${INCLUDE_PATH}" \
         cxxflags="${CXXFLAGS}" \
         linkflags="${LINKFLAGS}" \
-        -j$CPU_COUNT \
+        -j"$(sysctl -n hw.ncpu)" \
         -d0 \
         install | tee b2.log 2>&1
 fi
