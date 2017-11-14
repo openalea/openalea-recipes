@@ -1,6 +1,4 @@
-===================
-Conda Recipes for OpenAlea
-===================
+# Conda Recipes for OpenAlea
 
 [OpenAlea] depends on a **very** large number of heterogeneous packages, in C++ and Python.
 Some of these packages are provided by Conda (MinGW, Qt, PyQt, sip, boost).
@@ -12,9 +10,8 @@ For the packages that *aren't* provided by [conda], we use the recipes provided 
 [conda]: http://conda.pydata.org/
 [OpenAlea]: http://openalea.gforge.inria.fr
 
-========
-Contents
-========
+
+## Contents
 
 - [Installing OpenAlea for development](#installing)
 - [How to build these packages yourself](#howtobuild)
