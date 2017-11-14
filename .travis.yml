@@ -14,7 +14,7 @@ env:
    CONDA_VERSION=2
    ANACONDA_UPLOAD=artzet_s
    ANACONDA_LABEL=main
-   TRAVIS_WAIT=40
+   TRAVIS_WAIT=60
 
 install:
   - git clone https://github.com/openalea/travis-ci.git
