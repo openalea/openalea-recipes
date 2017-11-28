@@ -12,8 +12,8 @@ services:
 env:
  - CONDA_RECIPE=boost
    CONDA_VERSION=2
-   ANACONDA_UPLOAD=artzet_s
-   ANACONDA_LABEL=main
+   ANACONDA_UPLOAD=openalea
+   ANACONDA_LABEL=unstable
    TRAVIS_WAIT=60
 
 install:
