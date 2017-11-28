@@ -5,17 +5,15 @@ platform:
 environment:
   matrix:
   # Add here environement variables to control the Travis CI build
+    - CONDA_RECIPE: boost
+      CONDA_VERSION: 2
+      ANACONDA_UPLOAD: openalea
+      ANACONDA_LABEL: unstable
 
-    - CONDA_RECIPE=boost
-      CONDA_VERSION=2
-      ANACONDA_UPLOAD=openalea
-      ANACONDA_LABEL=unstable
-      TRAVIS_WAIT=60
-
-    - CONDA_RECIPE=qhull
-      CONDA_VERSION=2
-      ANACONDA_UPLOAD=openalea
-      ANACONDA_LABEL=unstable
+    - CONDA_RECIPE: qhull
+      CONDA_VERSION: 2
+      ANACONDA_UPLOAD: openalea
+      ANACONDA_LABEL: unstable
 
 install:
   - git clone https://github.com/OpenAlea/appveyor-ci.git appveyor-ci
