@@ -16,6 +16,11 @@ env:
    ANACONDA_LABEL=unstable
    TRAVIS_WAIT=60
 
+ - CONDA_RECIPE=qhull
+   CONDA_VERSION=2
+   ANACONDA_UPLOAD=openalea
+   ANACONDA_LABEL=unstable
+
 install:
   - git clone https://github.com/openalea/travis-ci.git
   - cd travis-ci
