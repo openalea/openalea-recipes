@@ -12,6 +12,7 @@ source:
 
 about:
   home: http://www.qhull.org/
+summary: 'Qhull is a general dimension code for computing convex hulls'
 
 requirements:
   # it doesn't really require python, but maybe that will fix
