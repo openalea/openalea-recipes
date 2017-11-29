@@ -14,9 +14,20 @@ about:
   home: http://www.qhull.org/
 summary: 'Qhull is a general dimension code for computing convex hulls'
 
+build:
+  features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+  track_features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+
+
 requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
    - cmake
-   - vs2013_runtime [win]
+   - vs2008_runtime    [win and py27]
+   - vs2015_runtime    [win and py36]
+
