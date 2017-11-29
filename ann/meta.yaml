@@ -17,6 +17,8 @@ build:
 requirements:
   build:
     - cmake
+    - vs2013_runtime [win]
+    - patch
 
 # Note: tests are run when building the package, they are not accessible
 # in the installed package.
