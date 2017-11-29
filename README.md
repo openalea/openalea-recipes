@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/openalea/openalea-recipes.svg?branch=master)](https://travis-ci.org/openalea/openalea-recipes)
+
 # Conda Recipes for OpenAlea
 
 [OpenAlea] depends on a **very** large number of heterogeneous packages, in C++ and Python.
@@ -42,7 +44,8 @@ wget https://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
 bash Miniconda-latest-MacOSX-x86_64.sh
 
 # Windows:
-TODO
+powershell "$client = new-object System.Net.WebClient; $client.DownloadFile(\"https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86_64.exe\", \"Miniconda2-latest-Windows-x86_64.exe\")"
+Miniconda2-latest-Windows-x86_64.exe
 
 # Activate conda
 CONDA_ROOT=`conda info --root`
@@ -63,7 +66,7 @@ The [conda documentation][2] explains in detail how to create a new package, but
 
 ```
 source activate root
-conda install conda-build jinja2
+conda install conda-build
 ```
 
 1. Create recipe files
@@ -88,7 +91,7 @@ A complete recipe has at least 3 files:
 Write **meta.yaml**:
 
 ```
-$ cat > meta.yaml
+$ cat meta.yaml
 package:
   name: somepackage
   version: 1.2.3
@@ -114,7 +117,7 @@ about:
 Write **build.sh**:
 
 ```
-$ cat > build.sh
+$ cat build.sh
 # configure, make, and install
 configure --prefix=$PREFIX --with-zlib=$PREFIX
 make -j${CPU_COUNT}
@@ -124,7 +127,7 @@ make install
 Write **bld.bat**:
 
 ```
-$ cat > bld.bat
+$ cat bld.bat
 mkdir build
 cd build
 
