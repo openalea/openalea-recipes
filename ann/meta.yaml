@@ -14,12 +14,21 @@ source:
 build:
   detect_binary_files_with_prefix: true
 
+build:
+  features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+  track_features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+
+
 requirements:
   build:
-    - cmake
-
-# Note: tests are run when building the package, they are not accessible
-# in the installed package.
+   - cmake
+   - vs2008_runtime    [win and py27]
+   - vs2015_runtime    [win and py36]
+   - patch
 
 about:
     home: http://www.cs.umd.edu/~mount/ANN/
