@@ -1,6 +1,8 @@
 
 [![Build Status](https://travis-ci.org/openalea/openalea-recipes.svg?branch=master)](https://travis-ci.org/openalea/openalea-recipes)
 
+[![Build Status](https://ci.appveyor.com/api/projects/status/hnpi89il2yukq6dv/branch/master?svg=true)](https://ci.appveyor.com/project/fredboudon/openalea-recipes)
+
 # Conda Recipes for OpenAlea
 
 [OpenAlea] depends on a **very** large number of heterogeneous packages, in C++ and Python.
