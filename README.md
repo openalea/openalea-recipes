@@ -1,3 +1,9 @@
+.. image:: https://travis-ci.org/openalea/openalea-recipes.svg?branch=master
+    :target: https://travis-ci.org/openalea/openalea-recipes
+
+.. image:: https://ci.appveyor.com/api/projects/status/hnpi89il2yukq6dv/branch/master?svg=true
+   :target: https://ci.appveyor.com/project/fredboudon/openalea-recipes
+
 ===================
 Conda Recipes for OpenAlea
 ===================
