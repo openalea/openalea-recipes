@@ -11,6 +11,9 @@ about:
     home: http://flex.sourceforge.net/
     license: http://flex.sourceforge.net/manual/Copyright.html
 
+build:
+  number: 2
+
 requirements:
   build:
     - m4

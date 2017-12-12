@@ -1,0 +1,17 @@
+diff --git a/sequence_analysis/SConstruct b/sequence_analysis/SConstruct
+index d4009ee..b2df4e4 100644
+--- a/sequence_analysis/SConstruct
++++ b/sequence_analysis/SConstruct
+@@ -9,10 +9,10 @@ options = Variables(['../options.py', 'options.py'], ARGUMENTS)
+ options.Add(BoolVariable('with_efence', 'build tests with efence library', 0))
+ options.Add(BoolVariable('DEBUG', 'my debug', 0))
+ 
+-tools = ['boost_python', 'qt4', 'vplants.tool', 'install', 'vplants.stat_tool']
++tools = ['boost_python', 'qt4', 'vplants.tool', 'vplants.stat_tool']
+ 
+ env = ALEASolution(options, tools)
+-env.AppendUnique(CXXFLAGS=['-x', 'c++', '-std=c++0x'])
++#env.AppendUnique(CXXFLAGS=['-x', 'c++', '-std=c++0x'])
+ 
+ # Build stage
+ prefix = env['build_prefix']

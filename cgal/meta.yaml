@@ -18,14 +18,15 @@ requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
-   - boost ==1.57
+   - boost 1.57.0
    - python
    - cmake
    - mpfr
    - gmp
    - qt <5
+   - patchelf [linux]
   run:
-   - boost ==1.57
+   - boost 1.57.0
    - gmp
    - mpfr
    - qt <5

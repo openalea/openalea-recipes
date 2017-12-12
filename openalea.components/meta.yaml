@@ -1,0 +1,36 @@
+package:
+  name: openalea.components
+  version: 1.4.0
+
+source:
+  git_url: https://github.com/openalea/openalea-components
+
+
+build:
+  preserve_egg_dir: True
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.misc
+    - openalea.core
+  run:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.misc
+    - openalea.core
+    - numpy
+    - scipy
+    - matplotlib
+
+test:
+  imports:
+    - openalea.math
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: Cecill-C License

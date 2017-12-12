@@ -1,0 +1,30 @@
+package:
+  name: vplants.aml2py
+  version: 1.2.0
+
+source:
+  git_url: https://github.com/VirtualPlants/AML
+
+about:
+  home: http://openalea.gforge.inria.fr
+  license: Cecill-C
+  summary: Convert AML scripts to Python
+
+build:
+  preserve_egg_dir: True
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+  run:
+    - python
+
+test:
+  imports:
+    - aml2py
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: Cecill-C License

@@ -1,0 +1,36 @@
+package:
+    name: ann
+    version: "1.1.2"
+
+source:
+    fn: ann_1.1.2.tar.gz
+    url: http://www.cs.umd.edu/~mount/ANN/Files/1.1.2/ann_1.1.2.tar.gz
+    md5: 7ffaacc7ea79ca39d4958a6378071365
+
+    patches:
+        - patches/cmake.patch
+
+
+build:
+  detect_binary_files_with_prefix: true
+
+build:
+  features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+  track_features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+
+
+requirements:
+  build:
+   - cmake
+   - vs2008_runtime    [win and py27]
+   - vs2015_runtime    [win and py36]
+   - patch
+
+about:
+    home: http://www.cs.umd.edu/~mount/ANN/
+    license: GNU Lesser General Public License (LGPL)
+summary: 'ANN: A Library for Approximate Nearest Neighbor Searching'

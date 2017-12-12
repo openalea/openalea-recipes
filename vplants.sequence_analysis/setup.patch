@@ -1,0 +1,84 @@
+diff --git a/sequence_analysis/setup.py b/sequence_analysis/setup.py
+index 6ce2074..2bafe4e 100644
+--- a/sequence_analysis/setup.py
++++ b/sequence_analysis/setup.py
+@@ -5,7 +5,7 @@ import os, sys
+ from os.path import join as pj
+ 
+ from setuptools import setup, find_packages
+-from openalea.deploy.binary_deps import binary_deps
++#from openalea.deploy.binary_deps import binary_deps
+ 
+ 
+ from openalea.deploy.metainfo import read_metainfo
+@@ -14,20 +14,20 @@ for key,value in metadata.iteritems():
+     exec("%s = '%s'" % (key, value))
+ 
+ 
+-build_prefix = "build-scons"
++#build_prefix = "build-scons"
+ 
+ # Scons build directory
+-scons_parameters=["build_prefix="+build_prefix]
++#scons_parameters=["build_prefix="+build_prefix]
+ 
+ 
+ # platform dependencies
+ install_requires = []
+ setup_requires = install_requires + ['openalea.deploy']
+ 
+-if sys.platform.startswith('win'):
+-    install_requires = [binary_deps('vplants.stat_tool')]
+-    install_requires += [binary_deps("boost")]
+-    setup_requires += [binary_deps("boost")]
++#if sys.platform.startswith('win'):
++#    install_requires = [binary_deps('vplants.stat_tool')]
++#    install_requires += [binary_deps("boost")]
++#    setup_requires += [binary_deps("boost")]
+ 
+ 
+ if __name__ == '__main__':
+@@ -43,18 +43,18 @@ if __name__ == '__main__':
+ 
+ 
+           # Define where to execute scons
+-          scons_scripts=['SConstruct'],
++          #scons_scripts=['SConstruct'],
+           # Scons parameters
+-          scons_parameters=scons_parameters,
++          #scons_parameters=scons_parameters,
+ 
+           namespace_packages=['openalea'],
+           create_namespaces=True,
+ 
+           # Packages
+-          packages=['openalea', 
++          packages=['openalea',
+                     'openalea.sequence_analysis',
+-                    'sequence_analysis_wralea.demo.change_point', 
+-                    'sequence_analysis_wralea.demo.stat_tool_tutorial', 
++                    'sequence_analysis_wralea.demo.change_point',
++                    'sequence_analysis_wralea.demo.stat_tool_tutorial',
+                     'sequence_analysis_wralea',
+                     ],
+ 
+@@ -68,8 +68,8 @@ if __name__ == '__main__':
+           zip_safe = False,
+ 
+           # Specific options of openalea.deploy
+-          lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
+-          inc_dirs = { 'include' : pj(build_prefix, 'include') },
++          #lib_dirs = {'lib' : pj(build_prefix, 'lib'),},
++          #inc_dirs = { 'include' : pj(build_prefix, 'include') },
+ 
+           entry_points = {
+             "wralea": ["vplants.stats = sequence_analysis_wralea",
+@@ -80,7 +80,7 @@ if __name__ == '__main__':
+           # Dependencies
+           setup_requires = setup_requires,
+           install_requires = install_requires,
+-          dependency_links = ['http://openalea.gforge.inria.fr/pi'],
++          #dependency_links = ['http://openalea.gforge.inria.fr/pi'],
+ 
+           pylint_packages = ['src/openalea/sequence_analysis']
+           )
