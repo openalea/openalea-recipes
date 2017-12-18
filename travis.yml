@@ -16,6 +16,9 @@ env:
  - CONDA_RECIPE=ann
    CONDA_VERSION=2
 
+ - CONDA_RECIPE=cgal
+   CONDA_VERSION=2
+
  - CONDA_RECIPE=boost
    CONDA_VERSION=2
    TRAVIS_WAIT=60
@@ -23,6 +26,7 @@ env:
  - CONDA_RECIPE=boost
    CONDA_VERSION=3
    TRAVIS_WAIT=60
+
 
 install:
   - git clone https://github.com/openalea/travis-ci.git
