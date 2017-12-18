@@ -1,20 +1,33 @@
 package:
   name: qhull
-  version: 2012.1
+  version: 2015.2
 
 source:
-  fn: qhull-2012.1.zip [win]
-  url: http://www.qhull.org/download/qhull-2012.1.zip [win]
-  md5: 32c1d151744fe17c64f28b99ccc2ee50 [win]
-  fn: qhull-2012.1-src.tgz [unix]
-  url: http://www.qhull.org/download/qhull-2012.1-src.tgz [unix]
-  md5: d0f978c0d8dfb2e919caefa56ea2953c [unix]
+  fn: qhull-2015.2.zip [win]
+  url: http://www.qhull.org/download/qhull-2015.2.zip [win]
+  md5: 50d07dd461cb18c51a6550ac16a3ac4f [win]
+  fn: qhull-2015-src-7.2.0.tgz [unix]
+  url: http://www.qhull.org/download/qhull-2015-src-7.2.0.tgz [unix]
+  md5: e6270733a826a6a7c32b796e005ec3dc [unix]
 
 about:
   home: http://www.qhull.org/
+summary: 'Qhull is a general dimension code for computing convex hulls'
+
+build:
+  features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+  track_features:
+    - vc9               [win and py27]
+    - vc14              [win and py36]
+
 
 requirements:
   # it doesn't really require python, but maybe that will fix
   # the missing bin directory
   build:
    - cmake
+   - vs2008_runtime    [win and py27]
+   - vs2015_runtime    [win and py36]
+
