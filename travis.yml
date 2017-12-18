@@ -10,6 +10,9 @@ services:
   - docker
 
 env:
+ - CONDA_RECIPE=cgal
+   CONDA_VERSION=2
+   
  - CONDA_RECIPE=qhull
    CONDA_VERSION=2
 
@@ -17,9 +20,6 @@ env:
    CONDA_VERSION=2
 
  - CONDA_RECIPE=eigen
-   CONDA_VERSION=2
-
- - CONDA_RECIPE=cgal
    CONDA_VERSION=2
 
  - CONDA_RECIPE=bison
