@@ -11,11 +11,21 @@ environment:
     - CONDA_RECIPE: ann
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: eigen
+      CONDA_VERSION: 2
+
+    - CONDA_RECIPE: scons
+      CONDA_VERSION: 2
+
+    - CONDA_RECIPE: scons
+      CONDA_VERSION: 3
+
     - CONDA_RECIPE: boost
       CONDA_VERSION: 2
 
     - CONDA_RECIPE: boost
       CONDA_VERSION: 3
+
 
 install:
   - git clone https://github.com/OpenAlea/appveyor-ci.git appveyor-ci
