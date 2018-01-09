@@ -31,6 +31,16 @@ env:
    ANACONDA_UPLOAD=openalea
    ANACONDA_LABEL=unstable
 
+ - CONDA_RECIPE=deploy
+   CONDA_VERSION=2
+   ANACONDA_UPLOAD=openalea
+   ANACONDA_LABEL=unstable
+
+ - CONDA_RECIPE=sconsx
+   CONDA_VERSION=2
+   ANACONDA_UPLOAD=openalea
+   ANACONDA_LABEL=unstable
+
 install:
   - git clone https://github.com/openalea/travis-ci.git
   - cd travis-ci
