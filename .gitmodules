@@ -1,0 +1,3 @@
+[submodule "sconsx"]
+	path = sconsx
+	url = git://github.com/openalea/sconsx.git
