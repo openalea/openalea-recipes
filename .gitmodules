@@ -1,3 +1,6 @@
 [submodule "sconsx"]
 	path = sconsx
 	url = git://github.com/openalea/sconsx.git
+[submodule "deploy"]
+	path = deploy
+	url = git://github.com/openalea/deploy.git
