@@ -1,32 +1,32 @@
 package:
   name: cgal
-  version: 4.6.3
+  version: 4.11.0
 
 source:
-   fn: CGAL-4.6.3.tar.gz
-   url: http://gforge.inria.fr/frs/download.php/file/35138/CGAL-4.6.3.tar.gz
+   fn: CGAL-4.11.zip
+   url: https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-4.11/CGAL-4.11.zip
+   md5: 320d70f7fd2a98537d20e21eeaea5a25
 
 about:
   home: http://www.cgal.org/
   license: GPL/LGPL
   summary: robust C++ implementation of geometric algorithms
 
-# needs boost - this is now in defaults.  the ioos boost is broken (and has been
-# deprecated but still appears in the channel - 2015-08-02)
+build:
+    features:
+      - vc9               [win and py27]
+      - vc14              [win and py36]
 
 requirements:
-  # it doesn't really require python, but maybe that will fix
-  # the missing bin directory
   build:
-   - boost 1.57.0
-   - python
    - cmake
+   - eigen
    - mpfr
-   - gmp
-   - qt <5
-   - patchelf [linux]
+   - gmp [unix]
+   - mpir
+   - boost
+   - zlib
   run:
-   - boost 1.57.0
-   - gmp
+   - boost
+   - gmp [unix]
    - mpfr
-   - qt <5
