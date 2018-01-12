@@ -4,3 +4,6 @@
 [submodule "deploy"]
 	path = deploy
 	url = git://github.com/openalea/deploy.git
+[submodule "plantgl"]
+	path = plantgl
+	url = https://github.com/openalea/plantgl
