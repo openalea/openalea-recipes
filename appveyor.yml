@@ -5,7 +5,7 @@ platform:
 environment:
   matrix:
   # Add here environement variables to control the Travis CI build
-    - CONDA_RECIPE: boost
+    - CONDA_RECIPE: cgal
       CONDA_VERSION: 2
 
     - CONDA_RECIPE: qhull
@@ -14,8 +14,20 @@ environment:
     - CONDA_RECIPE: ann
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: eigen
+      CONDA_VERSION: 2
+
+    - CONDA_RECIPE: boost
+      CONDA_VERSION: 2
+
+    - CONDA_RECIPE: boost
+      CONDA_VERSION: 3
+
     - CONDA_RECIPE: scons
       CONDA_VERSION: 2
+
+    - CONDA_RECIPE: scons
+      CONDA_VERSION: 3
 
     - CONDA_RECIPE: deploy
       CONDA_VERSION: 2
