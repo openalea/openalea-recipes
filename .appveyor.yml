@@ -7,43 +7,27 @@ environment:
   # Add here environement variables to control the Travis CI build
     - CONDA_RECIPE: boost
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: qhull
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: ann
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: scons
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: deploy
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: sconsx
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: plantgl
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
     - CONDA_RECIPE: lpy
       CONDA_VERSION: 2
-      ANACONDA_UPLOAD: openalea
-      ANACONDA_LABEL: unstable
 
 install:
   - git clone https://github.com/OpenAlea/appveyor-ci.git appveyor-ci
