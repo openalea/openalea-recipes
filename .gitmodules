@@ -7,3 +7,6 @@
 [submodule "plantgl"]
 	path = plantgl
 	url = https://github.com/openalea/plantgl
+[submodule "lpy"]
+	path = lpy
+	url = https://github.com/openalea/lpy
