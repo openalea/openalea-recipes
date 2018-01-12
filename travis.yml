@@ -10,8 +10,9 @@ services:
   - docker
 
 env:
- - CONDA_RECIPE=cgal
+ - CONDA_RECIPE=boost
    CONDA_VERSION=2
+   TRAVIS_WAIT=60
 
  - CONDA_RECIPE=qhull
    CONDA_VERSION=2
@@ -28,15 +29,14 @@ env:
  - CONDA_RECIPE=flex
    CONDA_VERSION=2
 
+ - CONDA_RECIPE=cgal
+   CONDA_VERSION=2
+
  - CONDA_RECIPE=libQGLViewer
    CONDA_VERSION=2
 
  - CONDA_RECIPE=pyqglviewer
    CONDA_VERSION=2
-
- - CONDA_RECIPE=boost
-   CONDA_VERSION=2
-   TRAVIS_WAIT=60
 
  - CONDA_RECIPE=scons
    CONDA_VERSION=2
