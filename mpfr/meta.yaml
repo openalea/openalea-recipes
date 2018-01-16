@@ -1,0 +1,42 @@
+# This file created by conda-build 3.0.30
+# meta.yaml template originally from:
+# C:\ci\containers\000025s6an7\tmp\build\80754af9\rsync-recipes\mpfr-3.1.5-c_compilervs2015-on-winbuilder, last modified Tue Nov 21 12:01:52 2017
+# ------------------------------------------------
+
+package:
+    name: mpfr
+    version: 3.1.5
+source:
+    fn: 1535d223d5df0c8f6a2722796efb96c845c25405.zip
+    sha256: 050eb5f8c40e634d2681b5d84764b75bb103c35a7491e999d6a5b3a94b34f325
+    url: https://github.com/BrianGladman/mpfr/archive/1535d223d5df0c8f6a2722796efb96c845c25405.zip
+build:
+    number: '2'
+    string: h35fb66f_2
+requirements:
+    build:
+        - mpir 
+    host:
+        - mpir 
+    run:
+        - mpir
+test:
+    commands:
+        - if not exist %LIBRARY_INC%\\mpfr.h exit 1
+        - if not exist %LIBRARY_LIB%\\mpfr.lib exit 1
+        - if not exist %LIBRARY_BIN%\\mpfr.dll exit 1
+        - if not exist %LIBRARY_LIB%\\mpfr_static.lib exit 1
+    requires:
+        - vs2015_win-64
+about:
+    home: http://www.mpfr.org/
+    license: LGPL 3
+    license_file: C:\ci\mpfr_1511294909235\work/COPYING.LESSER
+    summary: The MPFR library is a C library for multiple-precision floating-point
+        computations with correct rounding.
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - isuruf
+        - jakirkham

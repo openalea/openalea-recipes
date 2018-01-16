@@ -16,8 +16,7 @@ about:
 
 requirements:
   build:
-    - gcc 4.8.5 # [linux]
-    - gcc 4.8.5 # [osx]
+    - gcc 4.8.5
     - m4
 
 test:

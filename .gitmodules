@@ -1,0 +1,12 @@
+[submodule "sconsx"]
+	path = sconsx
+	url = git://github.com/openalea/sconsx.git
+[submodule "deploy"]
+	path = deploy
+	url = git://github.com/openalea/deploy.git
+[submodule "plantgl"]
+	path = plantgl
+	url = https://github.com/openalea/plantgl
+[submodule "lpy"]
+	path = lpy
+	url = https://github.com/openalea/lpy
