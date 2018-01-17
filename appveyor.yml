@@ -23,12 +23,6 @@ environment:
     - CONDA_RECIPE: boost
       CONDA_VERSION: 3
 
-    - CONDA_RECIPE: scons
-      CONDA_VERSION: 2
-
-    - CONDA_RECIPE: scons
-      CONDA_VERSION: 3
-
     - CONDA_RECIPE: deploy
       CONDA_VERSION: 2
 
