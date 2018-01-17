@@ -38,9 +38,6 @@ env:
  - CONDA_RECIPE=pyqglviewer
    CONDA_VERSION=2
 
- - CONDA_RECIPE=scons
-   CONDA_VERSION=2
-
  - CONDA_RECIPE=deploy
    CONDA_VERSION=2
 
