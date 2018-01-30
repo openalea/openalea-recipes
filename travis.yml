@@ -10,6 +10,12 @@ services:
   - docker
 
 env:
+ - CONDA_RECIPE=gmp
+   CONDA_VERSION=2
+
+ - CONDA_RECIPE=mpfr
+   CONDA_VERSION=2
+ 
  - CONDA_RECIPE=boost
    CONDA_VERSION=2
    TRAVIS_WAIT=60
