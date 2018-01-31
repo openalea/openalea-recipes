@@ -16,24 +16,24 @@ env:
  #- CONDA_RECIPE=mpfr
  #  CONDA_VERSION=2
 
- #- CONDA_RECIPE=boost
- #  CONDA_VERSION=2
- #  TRAVIS_WAIT=60
+ - CONDA_RECIPE=boost
+   CONDA_VERSION=2
+   TRAVIS_WAIT=60
 
- #- CONDA_RECIPE=qhull
- #  CONDA_VERSION=2
+ - CONDA_RECIPE=qhull
+   CONDA_VERSION=2
 
- #- CONDA_RECIPE=ann
- #  CONDA_VERSION=2
+ - CONDA_RECIPE=ann
+   CONDA_VERSION=2
 
- #- CONDA_RECIPE=eigen
- #  CONDA_VERSION=2
+ - CONDA_RECIPE=eigen
+   CONDA_VERSION=2
 
- #- CONDA_RECIPE=bison
- #  CONDA_VERSION=2
+ - CONDA_RECIPE=bison
+   CONDA_VERSION=2
 
- #- CONDA_RECIPE=flex
- #  CONDA_VERSION=2
+ - CONDA_RECIPE=flex
+   CONDA_VERSION=2
 
  - CONDA_RECIPE=cgal
    CONDA_VERSION=2
@@ -55,6 +55,8 @@ env:
 
  - CONDA_RECIPE=lpy
    CONDA_VERSION=2
+   
+ - ANACONDA_RELEASE=true
 
 install:
   - git clone https://github.com/openalea/travis-ci.git
