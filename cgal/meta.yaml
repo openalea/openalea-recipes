@@ -22,11 +22,22 @@ requirements:
    - cmake
    - eigen
    - mpfr
-   - gmp [unix]
+   #- gmp [unix]
    - mpir
    - boost
    - zlib
   run:
    - boost
-   - gmp [unix]
+   #- gmp [unix]
    - mpfr
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libCGAL${SHLIB_EXT}  # [unix]
+    - conda inspect linkages $PKG_NAME  # [not win]
+    - conda inspect objects $PKG_NAME  # [osx]
+
+about:
+  home: http://www.cgal.org/
+  license: GPL3/LGPL3
+  summary: Computational Geometry Algorithms Library
