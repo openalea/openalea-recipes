@@ -17,8 +17,8 @@ environment:
     - CONDA_RECIPE: eigen
       CONDA_VERSION: 2
 
-    - CONDA_RECIPE: cgal
-      CONDA_VERSION: 2
+  #  - CONDA_RECIPE: cgal
+  #    CONDA_VERSION: 2
 
     - CONDA_RECIPE: deploy
       CONDA_VERSION: 2
