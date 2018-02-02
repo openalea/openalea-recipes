@@ -40,9 +40,14 @@ if errorlevel 1 exit 1
 if errorlevel 1 exit 1
 
 
+:: Get the major minor version info (e.g. `1_61`)
+python -c "import os; print('_'.join(os.environ['PKG_VERSION'].split('.')[:2]))" > temp.txt
+set /p MAJ_MIN_VER=<temp.txt
+
 :: Install fix-up for a non version-specific boost include
-move %LIBRARY_INC%\boost-%PKG_VERSION_MAJOR%_%PKG_VERSION_MINOR%\boost %LIBRARY_INC%
-if errorlevel 1 exit 1
+xcopy /E/Y %LIBRARY_INC%\boost-%MAJ_MIN_VER%\boost\* %LIBRARY_INC%\boost\
+rmdir /s /q %LIBRARY_INC%\boost-%MAJ_MIN_VER%\boost
 
 :: Move dll's to LIBRARY_BIN
-move %LIBRARY_LIB%\*vc%LIB_VER%-mt-%PKG_VERSION_MAJOR%_%PKG_VERSION_MINOR%.dll "%LIBRARY_BIN%"
+move %LIBRARY_LIB%\*vc%VS_MAJOR%0-mt-%MAJ_MIN_VER%.dll "%LIBRARY_BIN%"
+if errorlevel 1 exit 1

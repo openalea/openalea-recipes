@@ -1,14 +1,26 @@
-{% set version = "1.64.0" %}
-{% set filename = "boost_%s.tar.bz2" % version.replace(".", "_") %}
+{% set version_win = "1.64.0" %}
+{% set filename_win = "boost_%s.tar.bz2" % version_win.replace(".", "_") %}
+{% set sha_win = "7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332" %}
+
+{% set version_unix = "1.65.1" %}
+{% set filename_unix = "boost_%s.tar.bz2" % version_unix.replace(".", "_") %}
+{% set sha_unix = "9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81" %}
+
+
 
 package:
   name: boost
-  version: {{ version }}
+  version: {{ version_unix }}   [unix]
+  version: {{ version_win }}    [win]
 
 source:
-  fn:  {{ filename }}
-  url: https://dl.bintray.com/boostorg/release/{{ version }}/source/{{ filename }}
-  sha256: 7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332
+  fn:  {{ filename_win }}       [win]
+  url: https://dl.bintray.com/boostorg/release/{{ version_win }}/source/{{ filename_win }}  [win]
+  sha256: {{ sha_win }}  [win]
+
+  fn:  {{ filename_unix }}       [unix]
+  url: https://dl.bintray.com/boostorg/release/{{ version_unix }}/source/{{ filename_unix }}  [unix]
+  sha256: {{ sha_unix }}  [unix]
 
 build:
   features:
