@@ -31,6 +31,8 @@ environment:
 
     - CONDA_RECIPE: lpy
       CONDA_VERSION: 2
+    
+    - ANACONDA_RELEASE: true
 
 install:
   - git clone https://github.com/OpenAlea/appveyor-ci.git appveyor-ci
