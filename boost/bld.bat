@@ -37,6 +37,8 @@ if errorlevel 1 exit 1
     link=static,shared ^
     --layout=system ^
     --with-python ^
+    --with-thread ^
+    --with-math ^
     -j%CPU_COUNT%
 if errorlevel 1 exit 1
 
