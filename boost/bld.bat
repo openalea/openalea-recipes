@@ -2,7 +2,7 @@
 
 :: Write python configuration, see https://github.com/boostorg/build/issues/194
 @echo using python > user-config.jam
-@echo using thread >> user-config.jam
+@echo : using thread >> user-config.jam
 @echo : %PY_VER% >> user-config.jam
 @echo : %PYTHON:\=\\% >> user-config.jam
 @echo : %PREFIX:\=\\%\\include >> user-config.jam
