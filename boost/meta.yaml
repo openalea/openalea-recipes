@@ -12,7 +12,7 @@ package:
   version: {{ version }}
 
 source:
-  fn:  {{ filename_ }}       [win]
+  fn:  {{ filename }}
   url: https://dl.bintray.com/boostorg/release/{{ version }}/source/{{ filename }}
   sha256: {{ sha }}
 
