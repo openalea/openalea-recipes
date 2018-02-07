@@ -10,3 +10,6 @@
 [submodule "lpy"]
 	path = lpy
 	url = https://github.com/openalea/lpy
+[submodule "mtg"]
+	path = mtg
+	url = https://github.com/openalea/mtg
