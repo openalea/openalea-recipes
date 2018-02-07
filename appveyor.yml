@@ -26,12 +26,18 @@ environment:
     - CONDA_RECIPE: sconsx
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: openalea\core
+      CONDA_VERSION: 2
+
+    - CONDA_RECIPE: openalea\vpltk
+      CONDA_VERSION: 2
+
     - CONDA_RECIPE: plantgl
       CONDA_VERSION: 2
 
     - CONDA_RECIPE: lpy
       CONDA_VERSION: 2
-    
+
     - ANACONDA_RELEASE: true
 
 install:
