@@ -47,6 +47,9 @@ environment:
     - CONDA_RECIPE: openalea\oalab
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: mtg
+      CONDA_VERSION: 2
+
     - ANACONDA_RELEASE: true
 
 install:
