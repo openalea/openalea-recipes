@@ -19,3 +19,6 @@
 [submodule "openalea.core"]
 	path = openalea.core
 	url = https://github.com/openalea/core
+[submodule "openalea.vpltk"]
+	path = openalea.vpltk
+	url = https://github.com/openalea/vpltk

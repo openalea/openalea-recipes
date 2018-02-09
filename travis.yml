@@ -53,7 +53,7 @@ env:
  - CONDA_RECIPE=openalea.core
    CONDA_VERSION=2
 
- - CONDA_RECIPE=openalea/vpltk
+ - CONDA_RECIPE=openalea.vpltk
    CONDA_VERSION=2
 
  - CONDA_RECIPE=openalea/grapheditor
