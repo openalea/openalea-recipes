@@ -26,7 +26,7 @@ environment:
     - CONDA_RECIPE: sconsx
       CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea\core
+    - CONDA_RECIPE: openalea.core
       CONDA_VERSION: 2
 
     - CONDA_RECIPE: openalea\vpltk

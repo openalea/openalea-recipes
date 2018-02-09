@@ -16,3 +16,6 @@
 [submodule "mtg"]
 	path = mtg
 	url = https://github.com/openalea/mtg
+[submodule "openalea.core"]
+	path = openalea.core
+	url = https://github.com/openalea/core
