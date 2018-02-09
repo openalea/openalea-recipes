@@ -22,3 +22,6 @@
 [submodule "openalea.vpltk"]
 	path = openalea.vpltk
 	url = https://github.com/openalea/vpltk
+[submodule "openalea.grapheditor"]
+	path = openalea.grapheditor
+	url = https://github.com/openalea/grapheditor
