@@ -25,3 +25,6 @@
 [submodule "openalea.grapheditor"]
 	path = openalea.grapheditor
 	url = https://github.com/openalea/grapheditor
+[submodule "openalea.visualea"]
+	path = openalea.visualea
+	url = https://github.com/openalea/visualea

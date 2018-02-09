@@ -56,10 +56,10 @@ env:
  - CONDA_RECIPE=openalea.vpltk
    CONDA_VERSION=2
 
- - CONDA_RECIPE=openalea/grapheditor
+ - CONDA_RECIPE=openalea.grapheditor
    CONDA_VERSION=2
 
- - CONDA_RECIPE=openalea/visualea
+ - CONDA_RECIPE=openalea.visualea
    CONDA_VERSION=2
 
  - CONDA_RECIPE=plantgl
