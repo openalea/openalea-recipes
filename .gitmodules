@@ -28,3 +28,6 @@
 [submodule "openalea.visualea"]
 	path = openalea.visualea
 	url = https://github.com/openalea/visualea
+[submodule "openalea.oalab"]
+	path = openalea.oalab
+	url = https://github.com/openalea/oalab
