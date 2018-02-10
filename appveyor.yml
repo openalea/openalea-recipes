@@ -23,6 +23,9 @@ environment:
     - CONDA_RECIPE: deploy
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: scons
+      CONDA_VERSION: 2
+
     - CONDA_RECIPE: sconsx
       CONDA_VERSION: 2
 
