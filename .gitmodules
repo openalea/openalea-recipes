@@ -16,3 +16,18 @@
 [submodule "mtg"]
 	path = mtg
 	url = https://github.com/openalea/mtg
+[submodule "openalea.core"]
+	path = openalea.core
+	url = https://github.com/openalea/core
+[submodule "openalea.vpltk"]
+	path = openalea.vpltk
+	url = https://github.com/openalea/vpltk
+[submodule "openalea.grapheditor"]
+	path = openalea.grapheditor
+	url = https://github.com/openalea/grapheditor
+[submodule "openalea.visualea"]
+	path = openalea.visualea
+	url = https://github.com/openalea/visualea
+[submodule "openalea.oalab"]
+	path = openalea.oalab
+	url = https://github.com/openalea/oalab
