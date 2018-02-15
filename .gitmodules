@@ -31,3 +31,6 @@
 [submodule "openalea.oalab"]
 	path = openalea.oalab
 	url = https://github.com/openalea/oalab
+[submodule "openalea.misc"]
+	path = openalea.misc
+	url = https://github.com/openalea/misc
