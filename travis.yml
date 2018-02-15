@@ -56,7 +56,13 @@ env:
  - CONDA_RECIPE=openalea.core
    CONDA_VERSION=2
 
+ - CONDA_RECIPE=openalea/misc
+   CONDA_VERSION=2
+
  - CONDA_RECIPE=openalea.vpltk
+   CONDA_VERSION=2
+
+ - CONDA_RECIPE=openalea.oalab
    CONDA_VERSION=2
 
  - CONDA_RECIPE=openalea.grapheditor
@@ -71,14 +77,8 @@ env:
  - CONDA_RECIPE=lpy
    CONDA_VERSION=2
 
- - CONDA_RECIPE=openalea.oalab
-   CONDA_VERSION=2
-
  - CONDA_RECIPE=mtg
   CONDA_VERSION=2
-
- - CONDA_RECIPE=openalea/misc
-   CONDA_VERSION=2
 
  - ANACONDA_RELEASE=true
 
