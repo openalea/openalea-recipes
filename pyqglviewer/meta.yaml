@@ -8,7 +8,7 @@ source:
   #url: https://gforge.inria.fr/frs/download.php/file/35463/PyQGLViewer-0.14.1.tgz
   patches:
    # List any patch files here
-   - configure.py.patch
+   #- configure.py.patch
    #- examples.pri.patch
    #- libQGLViewer.pro.patch
 

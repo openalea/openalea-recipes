@@ -28,4 +28,6 @@ python configure.py -I $PREFIX/include \
 
 
 make
-make install
+#make install
+cp src/python/PyQGLViewer.py $SP_DIR
+cp build/PyQGLViewerQt4/PyQGLViewerQt4.* $SP_DIR
