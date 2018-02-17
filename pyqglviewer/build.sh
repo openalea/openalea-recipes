@@ -22,7 +22,7 @@ then
 fi
 
 
-python configure.py -I $PREFIX/include \
+python configure.py -Q $PREFIX/include -I $PREFIX/include \
 -I $PREFIX/include/Qt -I $PREFIX/include/QtCore -I $PREFIX/include/QtOpenGL -I $PREFIX/include/QtXml -I $PREFIX/include/QtGUI \
 -L $PREFIX/lib --extra-cxxflags="${CXXFLAGS}" --extra-lflags="${LINKFLAGS}"
 
