@@ -59,6 +59,9 @@ env:
  - CONDA_RECIPE=openalea.misc
    CONDA_VERSION=2
 
+ - CONDA_RECIPE=openalea.components
+   CONDA_VERSION=2
+
  - CONDA_RECIPE=openalea.vpltk
    CONDA_VERSION=2
 

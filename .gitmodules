@@ -34,3 +34,6 @@
 [submodule "openalea.fractalysis"]
 	path = openalea.fractalysis
 	url = https://github.com/openalea/fractalysis
+[submodule "openalea.components"]
+	path = openalea.components
+	url = https://github.com/openalea/openalea-components
