@@ -59,6 +59,9 @@ environment:
     - CONDA_RECIPE: mtg
       CONDA_VERSION: 2
 
+    - CONDA_RECIPE: openalea.fractalysis
+      CONDA_VERSION: 2
+
     - ANACONDA_RELEASE: true
 
 install:
