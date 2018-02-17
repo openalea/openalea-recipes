@@ -29,8 +29,7 @@ requirements:
     - libqglviewer
 
   run:
-    # python dependency is here due to libboost-python library that depends on
-    # python version
+    # python dependency is here due to libboost-python library that depends on python version
     - python
     - qt <5
     - pyqt

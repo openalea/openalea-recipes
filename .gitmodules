@@ -31,3 +31,6 @@
 [submodule "openalea.misc"]
 	path = openalea.misc
 	url = https://github.com/openalea/misc
+[submodule "openalea.fractalysis"]
+	path = openalea.fractalysis
+	url = https://github.com/openalea/fractalysis
