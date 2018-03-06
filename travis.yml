@@ -86,6 +86,9 @@ env:
  - CONDA_RECIPE=openalea.fractalysis
    CONDA_VERSION=2
 
+ - CONDA_RECIPE=caribu
+   CONDA_VERSION=2
+
  - ANACONDA_RELEASE=true
 
 install:
