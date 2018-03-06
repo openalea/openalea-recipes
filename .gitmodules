@@ -40,3 +40,6 @@
 [submodule "libQGLViewer"]
 	path = libQGLViewer
 	url = https://github.com/OpenAleaRecipes/libqglviewer-recipe.git
+[submodule "pyqglviewer"]
+	path = pyqglviewer
+	url = https://github.com/fredboudon/PyQGLViewer.git
