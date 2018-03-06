@@ -43,3 +43,6 @@
 [submodule "pyqglviewer"]
 	path = pyqglviewer
 	url = https://github.com/fredboudon/PyQGLViewer.git
+[submodule "caribu"]
+	path = caribu
+	url = https://github.com/openalea-incubator/caribu.git
