@@ -49,3 +49,6 @@
 [submodule "plantscan3d"]
 	path = plantscan3d
 	url = https://github.com/openalea/plantscan3d
+[submodule "alinea.astk"]
+	path = alinea.astk
+	url = https://github.com/openalea-incubator/astk
