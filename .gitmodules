@@ -46,3 +46,6 @@
 [submodule "caribu"]
 	path = caribu
 	url = https://github.com/openalea-incubator/caribu.git
+[submodule "plantscan3d"]
+	path = plantscan3d
+	url = https://github.com/openalea/plantscan3d
