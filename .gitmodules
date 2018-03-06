@@ -37,3 +37,18 @@
 [submodule "openalea.components"]
 	path = openalea.components
 	url = https://github.com/openalea/openalea-components
+[submodule "libQGLViewer"]
+	path = libQGLViewer
+	url = https://github.com/OpenAleaRecipes/libqglviewer-recipe.git
+[submodule "pyqglviewer"]
+	path = pyqglviewer
+	url = https://github.com/fredboudon/PyQGLViewer.git
+[submodule "caribu"]
+	path = caribu
+	url = https://github.com/openalea-incubator/caribu.git
+[submodule "plantscan3d"]
+	path = plantscan3d
+	url = https://github.com/openalea/plantscan3d
+[submodule "alinea.astk"]
+	path = alinea.astk
+	url = https://github.com/openalea-incubator/astk
