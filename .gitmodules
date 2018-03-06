@@ -37,3 +37,6 @@
 [submodule "openalea.components"]
 	path = openalea.components
 	url = https://github.com/openalea/openalea-components
+[submodule "libQGLViewer"]
+	path = libQGLViewer
+	url = https://github.com/OpenAleaRecipes/libqglviewer-recipe.git
