@@ -77,8 +77,8 @@ environment:
     - CONDA_RECIPE: plantscan3d
       CONDA_VERSION: 2
 
-    #- CONDA_RECIPE: alinea.astk
-    #  CONDA_VERSION: 2
+    - CONDA_RECIPE: alinea.astk
+      CONDA_VERSION: 2
 
     - ANACONDA_RELEASE: true
 
