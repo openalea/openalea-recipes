@@ -5,80 +5,80 @@ platform:
 environment:
   matrix:
   # Add here environement variables to control the Travis CI build
-    - CONDA_RECIPE: boost
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: boost
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: qhull
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: qhull
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: ann
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: ann
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: eigen
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: eigen
+    #   CONDA_VERSION: 2
 
   #  - CONDA_RECIPE: cgal
   #    CONDA_VERSION: 2
 
-    - CONDA_RECIPE: libQGLViewer
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: libQGLViewer
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: pyqglviewer
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: pyqglviewer
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: deploy
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: deploy
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: scons
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: scons
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: sconsx
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: sconsx
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.core
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.core
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.misc
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.misc
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.vpltk
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.vpltk
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.misc
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.misc
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.components
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.components
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.oalab
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.oalab
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.grapheditor
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.grapheditor
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.visualea
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.visualea
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: plantgl
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: plantgl
+    #   CONDA_VERSION: 2
 
     - CONDA_RECIPE: lpy
       CONDA_VERSION: 2
 
-    - CONDA_RECIPE: mtg
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: mtg
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: openalea.fractalysis
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: openalea.fractalysis
+    #   CONDA_VERSION: 2
 
     #- CONDA_RECIPE: caribu
     #  CONDA_VERSION: 2
 
-    - CONDA_RECIPE: plantscan3d
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: plantscan3d
+    #   CONDA_VERSION: 2
 
-    - CONDA_RECIPE: alinea.astk
-      CONDA_VERSION: 2
+    # - CONDA_RECIPE: alinea.astk
+    #   CONDA_VERSION: 2
 
     - ANACONDA_RELEASE: true
 
