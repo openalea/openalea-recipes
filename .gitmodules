@@ -52,3 +52,6 @@
 [submodule "alinea.astk"]
 	path = alinea.astk
 	url = https://github.com/openalea-incubator/astk
+[submodule "openalea.weberpenn"]
+	path = openalea.weberpenn
+	url = https://github.com/openalea/weberpenn
