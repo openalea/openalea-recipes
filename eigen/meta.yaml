@@ -11,8 +11,6 @@ build:
 
 requirements:
   build:
-    - cmake
-    - pkg-config
 
 about:
   home: http://eigen.tuxfamily.org/

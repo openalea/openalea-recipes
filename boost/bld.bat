@@ -1,3 +1,14 @@
+:: Start with bootstrap
+
+:: Write python configuration, see https://github.com/boostorg/build/issues/194
+@echo using python > user-config.jam
+@echo : %PY_VER% >> user-config.jam
+@echo : %PYTHON:\=\\% >> user-config.jam
+@echo : %PREFIX:\=\\%\\include >> user-config.jam
+@echo : %PREFIX:\=\\%\\libs >> user-config.jam
+@echo ; >> user-config.jam
+xcopy user-config.jam C:\Users\appveyor
+
 :: Set the right msvc version according to Python version
 if "%PY_VER%"=="2.7" (
     set MSVC_VER=9.0
@@ -10,34 +21,42 @@ if "%PY_VER%"=="2.7" (
     set LIB_VER=140
 )
 
-:: Start with bootstrap
 call bootstrap.bat
+
 if errorlevel 1 exit 1
 
-:: Build step
+
 .\b2 install ^
     --build-dir=buildboost ^
     --prefix=%LIBRARY_PREFIX% ^
-    toolset=msvc-%MSVC_VER% ^
+    toolset=msvc-%VS_MAJOR%.0 ^
     address-model=%ARCH% ^
     variant=release ^
     threading=multi ^
     link=static,shared ^
-    -j%CPU_COUNT% ^
-    -s ZLIB_INCLUDE="%LIBRARY_INC%" ^
-    -s ZLIB_LIBPATH="%LIBRARY_LIB%"
+    --layout=system ^
+    --with-python ^
+    --with-thread ^
+    --with-math ^
+    -j%CPU_COUNT%
 if errorlevel 1 exit 1
 
-for /F "tokens=1,2,3 delims=." %%a in ("%PKG_VERSION%") do (
-   set PKG_VERSION_MAJOR=%%a
-   set PKG_VERSION_MINOR=%%b
-   set PKG_VERSION_PATCH=%%c
-)
+
+:: Get the major minor version info (e.g. `1_61`)
+:: python -c "import os; print('_'.join(os.environ['PKG_VERSION'].split('.')[:2]))" > temp.txt
+:: set /p MAJ_MIN_VER=<temp.txt
 
 :: Install fix-up for a non version-specific boost include
-move %LIBRARY_INC%\boost-%PKG_VERSION_MAJOR%_%PKG_VERSION_MINOR%\boost %LIBRARY_INC%
-if errorlevel 1 exit 1
+:: xcopy /E/Y %LIBRARY_INC%\boost-%MAJ_MIN_VER%\boost\* %LIBRARY_INC%\boost\
+:: rmdir /s /q %LIBRARY_INC%\boost-%MAJ_MIN_VER%\boost
 
 :: Move dll's to LIBRARY_BIN
-move %LIBRARY_LIB%\*vc%LIB_VER%-mt-%PKG_VERSION_MAJOR%_%PKG_VERSION_MINOR%.dll "%LIBRARY_BIN%"
+:: move %LIBRARY_LIB%\*vc%VS_MAJOR%0-mt-%MAJ_MIN_VER%.dll "%LIBRARY_BIN%"
+
+move %LIBRARY_LIB%\boost*.dll "%LIBRARY_BIN%"
+
 if errorlevel 1 exit 1
+
+:: Set BOOST_AUTO_LINK_NOMANGLE so that auto-linking uses system layout
+echo &echo.                           >> %LIBRARY_INC%\boost\config\user.hpp
+echo #define BOOST_AUTO_LINK_NOMANGLE >> %LIBRARY_INC%\boost\config\user.hpp

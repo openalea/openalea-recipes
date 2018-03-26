@@ -12,22 +12,32 @@ about:
   license: GPL/LGPL
   summary: robust C++ implementation of geometric algorithms
 
-# needs boost - this is now in defaults.  the ioos boost is broken (and has been
-# deprecated but still appears in the channel - 2015-08-02)
+build:
+    features:
+      - vc9               [win and py27]
+      - vc14              [win and py36]
 
 requirements:
-  # it doesn't really require python, but maybe that will fix
-  # the missing bin directory
   build:
-   - boost 
-   - python
    - cmake
+   - eigen
    - mpfr
-   - gmp
-   - qt <5
-   - patchelf [linux]
+   #- gmp [unix]
+   - mpir
+   - boost
+   - zlib
   run:
    - boost
-   - gmp
+   #- gmp [unix]
    - mpfr
-   - qt <5
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libCGAL${SHLIB_EXT}  # [unix]
+    - conda inspect linkages $PKG_NAME  # [not win]
+    - conda inspect objects $PKG_NAME  # [osx]
+
+about:
+  home: http://www.cgal.org/
+  license: GPL3/LGPL3
+  summary: Computational Geometry Algorithms Library
