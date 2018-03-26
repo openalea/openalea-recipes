@@ -1,11 +1,24 @@
+{% set version = "1.66.0" %}
+{% set filename = "boost_%s.tar.bz2" % version.replace(".", "_") %}
+{% set sha = "5721818253e6a0989583192f96782c4a98eb6204965316df9f5ad75819225ca9" %}
+
+#{% set version_unix = "1.65.1" %}
+#{% set filename_unix = "boost_%s.tar.bz2" % version_unix.replace(".", "_") %}
+#{% set sha_unix = "9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81" %}
+
+
 package:
   name: boost
-  version: 1.65.1
+  version: {{ version }}
 
 source:
-  fn:  boost_1_65_1.tar.bz2
-  url: https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.bz2
-  sha256: 9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81
+  fn:  {{ filename }}
+  url: https://dl.bintray.com/boostorg/release/{{ version }}/source/{{ filename }}
+  sha256: {{ sha }}
+
+#  fn:  {{ filename_unix }}       [unix]
+#  url: https://dl.bintray.com/boostorg/release/{{ version_unix }}/source/{{ filename_unix }}  [unix]
+#  sha256: {{ sha_unix }}  [unix]
 
 build:
   features:
@@ -18,6 +31,7 @@ build:
 requirements:
   build:
     - python
+    - numpy
     - vs2008_runtime    [win and py27]
     - vs2015_runtime    [win and py36]
     - icu 54.*          [unix]
@@ -28,10 +42,37 @@ requirements:
     # python dependency is here due to libboost-python library that depends on
     # python version
     - python
+    - numpy
     - icu 54.*          [unix]
     - zlib
+
+test:
+  commands:
+    # Verify libraries.
+    {% set boost_libs = [
+            "chrono",
+            "math_c99",
+            "math_c99f",
+            "math_c99l",
+            "math_tr1",
+            "math_tr1f",
+            "math_tr1l",
+            "python",
+            "system",
+            "thread",
+    ] %}
+    {% for each_boost_lib in boost_libs %}
+    - test -f $PREFIX/lib/libboost_{{ each_boost_lib }}.a                                                 # [unix]
+    - test -f $PREFIX/lib/libboost_{{ each_boost_lib }}.dylib                                             # [osx]
+    - test -f $PREFIX/lib/libboost_{{ each_boost_lib }}.so                                                # [linux]
+    - if not exist %PREFIX%\\Library\\bin\\boost_{{ each_boost_lib }}.dll exit 1                          # [win]
+    - if not exist %PREFIX%\\Library\\lib\\boost_{{ each_boost_lib }}.lib exit 1                          # [win]
+    - if not exist %PREFIX%\\Library\\lib\\libboost_{{ each_boost_lib }}.lib exit 1                       # [win]
+    {% endfor %}
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.boost.org/
   license: Boost-1.0
-
+  summary: Free peer-reviewed portable C++ source libraries.

@@ -1,0 +1,57 @@
+[submodule "sconsx"]
+	path = sconsx
+	url = git://github.com/openalea/sconsx.git
+[submodule "deploy"]
+	path = deploy
+	url = git://github.com/openalea/deploy.git
+[submodule "plantgl"]
+	path = plantgl
+	url = https://github.com/openalea/plantgl
+[submodule "lpy"]
+	path = lpy
+	url = https://github.com/openalea/lpy
+[submodule "mtg"]
+	path = mtg
+	url = https://github.com/openalea/mtg
+[submodule "openalea.core"]
+	path = openalea.core
+	url = https://github.com/openalea/core
+[submodule "openalea.vpltk"]
+	path = openalea.vpltk
+	url = https://github.com/openalea/vpltk
+[submodule "openalea.grapheditor"]
+	path = openalea.grapheditor
+	url = https://github.com/openalea/grapheditor
+[submodule "openalea.visualea"]
+	path = openalea.visualea
+	url = https://github.com/openalea/visualea
+[submodule "openalea.oalab"]
+	path = openalea.oalab
+	url = https://github.com/openalea/oalab
+[submodule "openalea.misc"]
+	path = openalea.misc
+	url = https://github.com/openalea/misc
+[submodule "openalea.fractalysis"]
+	path = openalea.fractalysis
+	url = https://github.com/openalea/fractalysis
+[submodule "openalea.components"]
+	path = openalea.components
+	url = https://github.com/openalea/openalea-components
+[submodule "libQGLViewer"]
+	path = libQGLViewer
+	url = https://github.com/OpenAleaRecipes/libqglviewer-recipe.git
+[submodule "pyqglviewer"]
+	path = pyqglviewer
+	url = https://github.com/fredboudon/PyQGLViewer.git
+[submodule "caribu"]
+	path = caribu
+	url = https://github.com/openalea-incubator/caribu.git
+[submodule "plantscan3d"]
+	path = plantscan3d
+	url = https://github.com/openalea/plantscan3d
+[submodule "alinea.astk"]
+	path = alinea.astk
+	url = https://github.com/openalea-incubator/astk
+[submodule "openalea.weberpenn"]
+	path = openalea.weberpenn
+	url = https://github.com/openalea/weberpenn

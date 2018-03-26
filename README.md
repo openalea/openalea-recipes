@@ -7,6 +7,7 @@
 Some of these packages are provided by Conda (MinGW, Qt, PyQt, sip, boost).
 
 For the packages that *aren't* provided by [conda], we use the recipes provided by this repository.
+We provide also some packages available in conda, to have homogeneous compiler flags (C++11, ...).
 
 [condabld]: http://conda.pydata.org/docs/build.html
 [oachannel]: https://anaconda.org/openalea
