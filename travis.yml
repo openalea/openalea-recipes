@@ -10,39 +10,38 @@ services:
   - docker
 
 env:
- # - CONDA_RECIPE=gmp
- #   CONDA_VERSION=2
 
- # - CONDA_RECIPE=mpfr
- #   CONDA_VERSION=2
+ ###############################################################
+ # Uncomment the following block when one dependency has changed
 
- - CONDA_RECIPE=boost
-  CONDA_VERSION=2
-  TRAVIS_WAIT=60
+ # - CONDA_RECIPE=boost
+ #  CONDA_VERSION=2
+ #  TRAVIS_WAIT=60
 
- - CONDA_RECIPE=qhull
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=qhull
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=ann
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=ann
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=eigen
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=eigen
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=bison
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=bison
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=flex
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=flex
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=cgal
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=cgal
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=libQGLViewer
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=libQGLViewer
+ #  CONDA_VERSION=2
 
- - CONDA_RECIPE=pyqglviewer
-  CONDA_VERSION=2
+ # - CONDA_RECIPE=pyqglviewer
+ #  CONDA_VERSION=2
+ ###############################################################
 
  - CONDA_RECIPE=deploy
   CONDA_VERSION=2
