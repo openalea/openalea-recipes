@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export BISON_PKGDATADIR=$_BISON_PKGDATADIR
