@@ -1,8 +1,9 @@
 language: cpp
 
 os:
-  - linux
   - osx
+  - linux
+
 
 sudo: required
 
