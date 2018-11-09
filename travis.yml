@@ -26,6 +26,9 @@ env:
   - CONDA_RECIPE=flex
    CONDA_VERSION=2
 
+  - CONDA_RECIPE=bison
+   CONDA_VERSION=2
+
   - CONDA_RECIPE=cgal
    CONDA_VERSION=2
 
