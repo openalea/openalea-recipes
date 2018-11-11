@@ -5,7 +5,7 @@ mkdir build
 cd build
 
 M4=m4 \
-  ./configure --prefix="$PREFIX"
+  ../configure --prefix="$PREFIX"
 make -j${CPU_COUNT} ${VERBOSE_AT}
 
 make check
