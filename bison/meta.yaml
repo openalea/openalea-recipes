@@ -19,8 +19,8 @@ requirements:
   build:
     - m4
     - perl
-  host:
     - flex
+    - make
   run:
     - m4 # [linux]
     - flex
