@@ -47,6 +47,9 @@ env:
   - CONDA_RECIPE=sconsx
    CONDA_VERSION=2
 
+  - CONDA_RECIPE=plantgl
+   CONDA_VERSION=2
+
   - CONDA_RECIPE=openalea.core
    CONDA_VERSION=2
 
@@ -66,9 +69,6 @@ env:
    CONDA_VERSION=2
 
   - CONDA_RECIPE=openalea.visualea
-   CONDA_VERSION=2
-
-  - CONDA_RECIPE=plantgl
    CONDA_VERSION=2
 
   - CONDA_RECIPE=lpy
