@@ -4,7 +4,7 @@ export PERL=${BUILD_PREFIX}/bin/perl
 mkdir build
 cd build
 
-M4=m4 \
+M4=${BUILD_PREFIX}/bin/m4 \
   ../configure --prefix="$PREFIX"
 make -j${CPU_COUNT} ${VERBOSE_AT}
 
